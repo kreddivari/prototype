@@ -1,0 +1,595 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Quote | Next Generation Fast Quote ~ Farmers Insurance</title>
+		<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/base/jquery-ui.css" type="text/css" media="all" /> 
+		<link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> 
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script> 
+		<script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/tags/latest/external/jquery.bgiframe-2.1.2.js"></script> 
+		<script type="text/javascript" src="js/typecast_1.4.js"></script>
+		<script type="text/javascript" src="js/typecast.config.js"></script>
+		<script type="text/javascript" src="js/jquery.bvalidator.js"></script>
+		<script type="text/javascript" src="js/modal.js"></script>
+		<script type="text/javascript">
+			window.onload = go;
+			function go() {
+				Typecast.Init();
+			}
+			function Navigate() {
+				window.location = "additional.html?Text=" + document.getElementById("hidText").value + ";"
+			}
+			function get1() {
+				var Vechilesget = getCookie("text");
+				document.getElementById("Vehicles").innerHTML = Vechilesget;
+			}
+			function load() {
+
+			    document.getElementById("FirstVehicle").innerHTML = getCookie("Vehicle1");
+			    document.getElementById("SecondVehicle").innerHTML = getCookie("Vehicle2");
+			    document.getElementById("ThirdVehicle").innerHTML = getCookie("Vehicle3");
+			    var driver1 = "Jordan Williams";
+			    var driver2 = getCookie("Driver2");
+			    if (driver1 != null) {
+			        document.getElementById("ListOfDrivers").innerHTML = "<li>" + driver1 + "</li>";
+			    }
+			    if (driver2 != null) {
+			        document.getElementById("ListOfDrivers").innerHTML = document.getElementById("ListOfDrivers").innerHTML + "<li> " + driver2 + " </li>";
+			    }
+			    document.getElementById("ListOfDrivers").innerHTML = document.getElementById("ListOfDrivers").innerHTML + "<li> " + getCookie("Driver3"); +" </li>";
+			    document.getElementById("ListOfVehicles").innerHTML = "<li> " + getCookie("Vehicle1") + " </li>";
+			    document.getElementById("ListOfVehicles").innerHTML = document.getElementById("ListOfVehicles").innerHTML + "<li> " + getCookie("Vehicle2") + " </li>";
+			    document.getElementById("ListOfVehicles").innerHTML = document.getElementById("ListOfVehicles").innerHTML + "<li> " + getCookie("Vehicle3") + " </li>";
+
+			}
+
+			function setCookie(c_name, value) {
+			    var c_value = value;
+			    document.cookie = c_name + "=" + c_value;
+			}
+			function getCookie(c_name) {
+			    var i, x, y, ARRcookies = document.cookie.split(";");
+			    for (i = 0; i < ARRcookies.length; i++) {
+			        x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+			        y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+			        x = x.replace(/^\s+|\s+$/g, "");
+			        if (x == c_name) {
+			            return unescape(y);
+			        }
+			    }
+			}
+			//        $(document).ready(function() {
+			//            $("#accordion").accordion();
+			//        });
+			// $(document).ready(function() {
+			//   $('#myform').bValidator();
+			//});
+			var gCurrentIndex = 0; // global variable to keep the current index;
+			var ACCORDION_PANEL_COUNT = 2; //global variable for panel count. Here 3 is for zero based accordion index
+			$(document).ready(function() {
+			    wizard = $("#accordion").accordion({
+			        event: 'click',
+			        active: 0,
+			        autoheight: true,
+			        animated: "slide",
+			        //icons: { 'header': 'ui-icon-plus', 'headerSelected': 'ui-icon-minus' },
+			        change: function(event, ui) { gCurrentIndex = $(this).find("h3").index(ui.newHeader[0]); }
+			    });
+
+			    //Bind event for previous and next buttons
+			    $('.BtnGray,.BtnGray1').click(function() {
+			        var index = 0;
+			        if ($(this).hasClass('BtnGray')) {
+			            index = gCurrentIndex + 1;
+			            if (index > ACCORDION_PANEL_COUNT) {
+			                index = ACCORDION_PANEL_COUNT;
+			            }
+			        } else {
+			            index = gCurrentIndex - 1;
+			            if (index < 0) {
+			                index = 0;
+			            }
+			        }
+			        //Call accordion method to set the active panel
+			        wizard.accordion("activate", index);
+			    });
+			});
+
+			$(document).ready(function() {
+			    $('#toggle-view li').click(function() {
+			        var text = $(this).children('p');
+			        if (text.is(':hidden')) {
+			            text.slideDown('200');
+			            $(this).children('span');
+			        } else {
+			            text.slideUp('200');
+			            $(this).children('span');
+			        }
+			    });
+			});
+		</script>
+	</head>
+	<body onLoad="load();">
+		<div id="Document">
+			<div id="Logo" title="Farmers&reg;"></div>
+			<div id="TopNav">
+				<ul>
+					<li id="Title" title="Auto Insurance Quote for the state of California"><b>Auto Insurance Quote</b> for the state of Arizona <span>Quote #14918654</span></li>
+					<li id="Secure"><a href="javascript://" title="Information is secure" onClick="popupSS('popUpDivSS')">Information is secure</a></li>
+					<li><a href="https://quote.farmers.com/FFQWeb/common/faq.jsf?lob=Auto" target="_blank" title="Help &amp; FAQs"><b>?</b> Help &amp; FAQs</a></li>
+				</ul>
+			</div>
+			<div id="BoxArea">
+				<ul id="ProgressBar">
+					<li id="PbInfo"><a href="info.html" title="Completed: Your Information" class="Off"><span>Completed:</span> Your Info</a></li>
+					<li id="PbVehicles"><a href="vehicles.html" title="Completed: Vehicles" class="Off"><span>Completed:</span> Vehicles</a></li>
+					<li id="PbDrivers"><a href="drivers.html" title="Completed: Drivers" class="Off"><span>Completed:</span> Drivers</a></li>
+					<li id="PbDiscounts"><a href="discounts.html" title="Completed: Discounts" class="Off"><span>Completed:</span> Discounts</a></li>
+					<li id="PbQuote"><a href="quote.html" title="Step 5: Quote" class="Sel"><span>Step 5:</span> Quote</a></li>
+				</ul>
+				<div id="AgentInfo" title="Joe Agent" style="top: -61px;">
+					<div id="AgentPhoto"></div>
+					<p>
+						<b>Joe Agent</b><br>
+						Gilbert, AZ<br>
+						<span id="AgentPhone">(480) 555-1234</span>
+						<button class="BtnGreen" title="Call Now">Call Now</button>
+					</p>
+				</div>
+                	<form id="myform" method="post">
+<!-- Content Starts -->
+				<div id="Intro" class="IconQuote">
+					<h1 title="Your Farmers rate quote!">Your Farmers rate quote!</h1>
+					<p>Review your 6 month policy coverage and customize your package below. Your Farmers agent, <i>{Agent Name}</i>, will contact you shortly at <b>(323) 551-1212</b> <a class="LinkLeft" href="#">Edit</a></p>
+				</div>
+				<div id="Content">
+					<div class="Results">
+						<ul>
+							<li title="Basic - Pay less out-of-pocket upfront, but assume more financial risk for any damages if you have an accident." onClick="location.href='quote_basic.html';" style="cursor: pointer;">
+								<h2>Basic</h2>
+								<p class="Price"><span>$</span>120<span>.30</span></p>
+								<p>monthly (<em>automatic*</em>)</p>
+							</li>
+							<li title="Essential - A little more out-of-pocket now gives you more assurance your policy the will cover any damages from an accident." class="Sel">
+								<h2>Essential</h2>
+								<p class="Price"><span>$</span>403<span>.50</span></p>
+								<p>monthly (<em>automatic*</em>)</p>
+								<button class="BtnGreen" title="Continue">Continue</button>
+							</li>
+							<li title="Personalized your coverage below.">
+								<h2>Customize my coverage</h2>								
+								<a class="BtnGray" title="Customize" href="quote_custom.html">Customize</a>
+							</li>
+						</ul>
+					</div>
+					<div class="Box">
+						<p style="text-align: center; border-bottom: 1px solid #ccc; padding: 12px 0 18px 0;"><small>* Future payments will be automatically withdrawn from your checking account</small></p>
+						<h2 title="Liability Coverage">Liability Coverage</h2>
+						<div class="Section">
+							<fieldset style="padding: 0; border: 0;">
+							<table class="Coverage">
+								<tr>
+									<th>Coverage</th>
+									<th>Limits</th>
+									<th>Costs</th>
+								</tr>
+								<tr>
+									<td class="Desc" style="width: 324px;"><a href="#">Bodily Injury</a></td>
+									<td>
+										<select name="BI" id="BI" data-bvalidator="request" onFocus="onFocusInfo(this.id);">
+											<option>Select</option>
+											<option  value="choose">$15,000/$30,000</option>
+											<option  value="choose">$25,000/$50,000</option>
+											<option  value="choose" selected>$50,000/$100,000</option>
+											<option  value="choose">$100,000/$300,000</option>
+											<option  value="choose">$250,000/$500,000</option>
+											<option  value="choose">$500,000/$500,000</option>
+											<option  value="choose">$500,000/$1,000,000</option>
+										</select>
+									</td>
+									<td>$335.90</td>
+								</tr>
+								<tr>
+									<td class="Desc"><a href="#">Property Damage Liability</a></td>
+									<td>
+										<select name="PDL" id="PDL" data-bvalidator="request" onFocus="onFocusInfo(this.id);">
+											<option>Select</option>
+											<option  value="choose">$5,000</option>
+											<option  value="choose">$10,000</option>
+											<option  value="choose" selected>$25,000</option>
+											<option  value="choose">$50,000</option>
+											<option  value="choose">$100,000</option>
+											<option  value="choose">$500,000</option>
+										</select>
+									</td>
+									<td>Included</td>
+								</tr>
+								<tr>
+									<td class="Desc"><a href="#">Medical Coverage</a></td>
+									<td>
+										<select name="Medical" id="Medical" data-bvalidator="request" onFocus="onFocusInfo(this.id);">
+												<option>Select</option>
+											<option  value="choose">No Coverage</option>
+											<option  value="choose">$1,000</option>
+											<option  value="choose" selected>$2,000</option>
+											<option  value="choose">$5,000/$500</option>
+											<option  value="choose">$5,000</option>
+											<option  value="choose">$10,000/$500</option>
+											<option  value="choose">$10,000</option>
+											<option  value="choose">$25,000/$500</option>
+										</select>
+									</td>
+									<td>$39.50</td>
+								</tr>
+								<tr>
+									<td class="Desc"><a href="#">Uninsured Motorist Bodily Injury</a></td>
+									<td style="padding-bottom: 10px;">
+										<select name="UMBI" id="UMBI" data-bvalidator="request" onFocus="onFocusInfo(this.id);">
+												<option>Select</option>
+											<option  value="choose">No Coverage</option>
+											<option  value="choose">$15,000/$30,000</option>
+											<option  value="choose" selected>$25,000/$50,000</option>
+											<option  value="choose">$30,000/$60,000</option>
+											<option  value="choose">$50,000/$100,000</option>
+											<option  value="choose">$100,000/$300,000</option>
+											<option  value="choose">$250,000/$500,000</option>
+											<option  value="choose">$500,000/$500,000</option>
+											<option  value="choose">$500,000/$1,000,000</option>
+										</select>
+									</td>
+									<td>$46.20</td>
+								</tr>
+								<tr class="Buttons">
+									<td colspan="3"><button class="BtnGray" title="Recalculate">Recalculate</button></td>
+								</tr>
+							</table>
+							</fieldset>
+						</div>
+						<h2 title="Vehicles">Vehicles</h2>
+						<div id="accordion">
+							<h3><a id="FirstVehicle" visible="false" href="#"></a></h3>
+							<div>
+								<table class="Coverage">
+									<tr>
+										<th>Coverage</th>
+										<th>Limits</th>
+										<th>Costs</th>
+									</tr>
+									<tr>
+										<td class="Desc"><a href="#">Comprehensive</a></td>
+										<td>
+											<select name="Comprehensive" id="Comprehensive" disabled="disabled">
+												<option  value="No Coverage">No Coverage</option>
+												<option  value="$250">$250</option>
+												<option  value="$500">$500</option>
+												<option  value="$750">$750</option>
+												<option selected value="$1,000">$1,000</option>
+												<option  value="$1,500">$1,500</option>
+												<option  value="$2,500">$2,500</option>
+												<option  value="$5,000">$5,000</option>
+											</select>
+										</td>
+										<td>$335.90</td>
+									</tr>
+									<tr>
+										<td class="Desc"><a href="#">Collision</a></td>
+										<td>
+											<select name="Collision" id="Collision" disabled="disabled">
+												<option  value="No Coverage">No Coverage</option>
+												<option  value="$250">$250</option>
+												<option  value="$500">$500</option>
+												<option  value="$750">$750</option>
+												<option selected value="$1,000">$1,000</option>
+												<option  value="$1,500">$1,500</option>
+												<option  value="$2,500">$2,500</option>
+												<option  value="$5,000">$5,000</option>
+											</select>
+										</td>
+										<td>Included</td>
+									</tr>
+									<tr>
+										<td class="Desc"><a href="#">Glass Deductible Buyback</a></td>
+										<td>
+											<select name="GlassBuyback" id="GlassBuyback" disabled="disabled">
+												<option selected value="No Coverage">No Coverage</option>
+												<option  value="Coverage">Coverage</option>
+											</select>
+										</td>
+										<td>$39.50</td>
+									</tr>
+									<tr>
+										<td class="Desc"><a href="#">Towing and Road Service</a></td>
+										<td>
+											<select name="TowingService" id="TowingService" disabled="disabled">
+												<option  value="No Coverage">No Coverage</option>
+												<option selected value="Coverage">Coverage</option>
+											</select>
+										</td>
+										<td>$46.20</td>
+									</tr>
+									<tr>
+										<td class="Desc"><a href="#">Loss of Use</a></td>
+										<td style="padding-bottom: 10px;">
+											<select name="LossUse" id="LossUse" disabled="disabled">
+												<option  value="No Coverage">No Coverage</option>
+												<option selected value="Coverage">Coverage</option>
+											</select>
+										</td>
+										<td>$46.20</td>
+									</tr>
+									<tr class="Buttons">
+										<td colspan="3"><button class="BtnGray" title="Next Vehicle" onClick="return false">Next Vehicle</button></td>
+									</tr>
+								</table>
+							</div>
+							<h3><a id="SecondVehicle" visible="false" href="#"></a></h3>
+							<div>
+								<table class="Coverage">
+									<tr>
+										<th>Coverage</th>
+										<th>Limits</th>
+										<th>Costs</th>
+									</tr>
+									<tr>
+										<td class="Desc"><a href="#">Comprehensive</a></td>
+										<td>
+											<select name="Comprehensive" id="Comprehensive" disabled="disabled">
+												<option  value="No Coverage">No Coverage</option>
+												<option  value="$250">$250</option>
+												<option  value="$500">$500</option>
+												<option  value="$750">$750</option>
+												<option selected value="$1,000">$1,000</option>
+												<option  value="$1,500">$1,500</option>
+												<option  value="$2,500">$2,500</option>
+												<option  value="$5,000">$5,000</option>
+											</select>
+										</td>
+										<td>$335.90</td>
+									</tr>
+									<tr>
+										<td class="Desc"><a href="#">Collision</a></td>
+										<td>
+											<select name="Collision" id="Collision" disabled="disabled">
+												<option  value="No Coverage">No Coverage</option>
+												<option  value="$250">$250</option>
+												<option  value="$500">$500</option>
+												<option  value="$750">$750</option>
+												<option selected value="$1,000">$1,000</option>
+												<option  value="$1,500">$1,500</option>
+												<option  value="$2,500">$2,500</option>
+												<option  value="$5,000">$5,000</option>
+											</select>
+										</td>
+										<td>Included</td>
+									</tr>
+									<tr>
+										<td class="Desc"><a href="#">Glass Deductible Buyback</a></td>
+										<td>
+											<select name="GlassBuyback" id="GlassBuyback" disabled="disabled">
+												<option selected value="No Coverage">No Coverage</option>
+												<option  value="Coverage">Coverage</option>
+											</select>
+										</td>
+										<td>$39.50</td>
+									</tr>
+									<tr>
+										<td class="Desc"><a href="#">Towing and Road Service</a></td>
+										<td>
+											<select name="TowingService" id="TowingService" disabled="disabled">
+												<option  value="No Coverage">No Coverage</option>
+												<option selected value="Coverage">Coverage</option>
+											</select>
+										</td>
+										<td>$46.20</td>
+									</tr>
+									<tr>
+										<td class="Desc"><a href="#">Loss of Use</a></td>
+										<td style="padding-bottom: 10px;">
+											<select name="LossUse" id="LossUse" disabled="disabled">
+												<option  value="No Coverage">No Coverage</option>
+												<option selected value="Coverage">Coverage</option>
+											</select>
+										</td>
+										<td>$46.20</td>
+									</tr>
+									<tr class="Buttons">
+										<td colspan="3"><button class="BtnGray" title="Next Vehicle" onClick="return false">Next Vehicle</button></td>
+									</tr>
+								</table>
+							</div>
+						<h3><a id="ThirdVehicle" visible="false" href="#"></a></h3>
+							<div>
+								<table class="Coverage">
+									<tr>
+										<th>Coverage</th>
+										<th>Limits</th>
+										<th>Costs</th>
+									</tr>
+									<tr>
+										<td class="Desc"><a href="#">Comprehensive</a></td>
+										<td>
+											<select name="Comprehensive" id="Select1" disabled="disabled">
+												<option  value="No Coverage">No Coverage</option>
+												<option  value="$250">$250</option>
+												<option  value="$500">$500</option>
+												<option  value="$750">$750</option>
+												<option selected value="$1,000">$1,000</option>
+												<option  value="$1,500">$1,500</option>
+												<option  value="$2,500">$2,500</option>
+												<option  value="$5,000">$5,000</option>
+											</select>
+										</td>
+										<td>$335.90</td>
+									</tr>
+									<tr>
+										<td class="Desc"><a href="#">Collision</a></td>
+										<td>
+											<select name="Collision" id="Select2" disabled="disabled">
+												<option  value="No Coverage">No Coverage</option>
+												<option  value="$250">$250</option>
+												<option  value="$500">$500</option>
+												<option  value="$750">$750</option>
+												<option selected value="$1,000">$1,000</option>
+												<option  value="$1,500">$1,500</option>
+												<option  value="$2,500">$2,500</option>
+												<option  value="$5,000">$5,000</option>
+											</select>
+										</td>
+										<td>Included</td>
+									</tr>
+									<tr>
+										<td class="Desc"><a href="#">Glass Deductible Buyback</a></td>
+										<td>
+											<select name="GlassBuyback" id="Select3" disabled="disabled">
+												<option selected value="No Coverage">No Coverage</option>
+												<option  value="Coverage">Coverage</option>
+											</select>
+										</td>
+										<td>$39.50</td>
+									</tr>
+									<tr>
+										<td class="Desc"><a href="#">Towing and Road Service</a></td>
+										<td>
+											<select name="TowingService" id="Select4" disabled="disabled">
+												<option  value="No Coverage">No Coverage</option>
+												<option selected value="Coverage">Coverage</option>
+											</select>
+										</td>
+										<td>$46.20</td>
+									</tr>
+									<tr>
+										<td class="Desc"><a href="#">Loss of Use</a></td>
+										<td style="padding-bottom: 10px;">
+											<select name="LossUse" id="Select5" disabled="disabled">
+												<option  value="No Coverage">No Coverage</option>
+												<option selected value="Coverage">Coverage</option>
+											</select>
+										</td>
+										<td>$46.20</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="Results" id="ResultsBtm">
+						<ul>
+							<li title="Basic - Pay less out-of-pocket upfront, but assume more financial risk for any damages if you have an accident." onClick="location.href='quote_basic.html';" style="cursor: pointer;">
+								<h2>Basic</h2>
+								<p class="Price"><span>$</span>120<span>.30</span></p>
+								<p>monthly (<em>automatic*</em>)</p>
+							</li>
+							<li title="Essential - A little more out-of-pocket now gives you more assurance your policy the will cover any damages from an accident." class="Sel">
+								<h2>Essential</h2>
+								<p class="Price"><span>$</span>403<span>.50</span></p>
+								<p>monthly (<em>automatic*</em>)</p>
+								<button class="BtnGreen" title="Continue">Continue</button>
+							</li>
+							<li title="Personalized your coverage below.">
+								<h2>Customize my coverage</h2>								
+								<a class="BtnGray" title="Customize" href="quote_custom.html">Customize</a>
+							</li>
+						</ul>
+					</div>
+					<p style="text-align: center; padding-bottom: 18px;"><small>* Future payments will be automatically withdrawn from your checking account</small></p>
+				</div>
+				<div id="RightRail" style="top: -61px;">
+					<h4 title="Quote Summary">Quote Summary <small>#14918654</small></h4>
+					<div id="QuoteSummary">
+						<h5>Auto Quote <span>(complete)</span></h5>
+						<ul>
+							<li><b>Drivers <a class="LinkRight" href="#" title="Edit">Edit</a></b>
+                                <ul>
+                                    <div id="ListOfDrivers">
+                                        <li>John Smith</li>
+                                        <li>Jane Smith</li>
+                                        <li>Kevin Smith</li>
+                                        <li>Sammy Smith</li>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li><b>Vehicles <a class="LinkRight" href="#" title="Edit">Edit</a></b>
+                                <ul>
+                                    <div id="ListOfVehicles">
+                                        <li>2009 VW Routan SEL 4D 4WD</li>
+                                        <li>2011 VW Jeta SE 4D 2WD</li>
+                                        <li>2010 VW Golf TDI 2D 2WD</li>
+                                        <li>2000 VW GTi 2D 2WD</li>
+                                        <li>1954 Porsche 356 Speedster 2.0 2D 2WD</li>
+                                    </div>
+                                </ul>
+                            </li>
+							<li>
+								<b>Your Discounts <a class="LinkRight" href="#" title="Edit">Edit</a></b>
+								<ul>
+									<li>Anti-lock Brakes</li>
+									<li>Good Driver</li>
+									<li>Safe Driving Discount</li>
+									<li>Anti-theft Device</li>
+									<li>Passive Restraint</li>
+									<li>Business/Professional Group</li>
+								</ul>
+							</li>
+							<li>
+								<b>Quote</b>
+								<ul>
+									<li>Your 6 month Premium: <strong>$2421.00</strong></li>
+								</ul>
+							</li>
+							<li>
+								<b>Potential Discounts*</b>
+								<ul>
+									<li>Auto & Home</li>
+									<li>Auto & Life</li>
+									<li><small>*Availability depends on rating criteria</small></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<h4 title="Common Questions">Common Questions</h4>
+					<ul id="FAQs">
+                    <ul id="toggle-view">
+	                	<li class="Expand">
+							<h5 title="How do I retrieve my saved quote later?" class="MyLink">How do I retrieve my saved quote later?</h5>
+							<p>To retrieve you saved quote we will need your last name, date of birth, zip code and your quote number or email address.  If you are unable to retrieve your quote, please contact your Farmers agent for assistance.</p>
+						</li>
+                    
+						<li class="Expand">
+							<h5 title="What are some of the factors that determine my auto insurance cost?" class="MyLink">What are some of the factors that determine my auto insurance cost? </h5>
+							<p><b>1.</b> Your lowest rates on car insurance depends on what you drive.</p>
+							<p><b>2.</b> It depends on the deductible: the higher the deductible, the lower the premium - but the more you'll pay out of pocket in case of a claim. The lower the deductible, the higher the premium - but the less you'll pay if you have a covered claim.</p>
+							<p><b>3.</b>  It depends on the limit:  the lower the limit, the lower the premium - but the less protection your insurance policy will provide to pay for damages you cause in an accident. The higher the limit, the higher the premium - but the more protection your insurance policy will provide to pay for damages you cause in an accident.</p>
+						</li>
+                      
+						<li class="Expand">
+							<h5 title="Is their difference between purchasing online or purchasing through an agent?" class="MyLink">Is their difference between purchasing online or purchasing through an agent?</h5>
+							<p>When you purchase online, you enjoy the convenience of shopping for insurance 24/7.  Whether you buy online or simply get a quote, a professional Farmers agent will follow-up with you to ensure your insurance package is appropriate for your needs and you are getting the best rate available.  Your agent will also ensure you receive all your eligible insurance discounts.</p>
+						</li>
+                      
+                        </ul>
+					</ul>
+				</div>
+<!-- Content Ends -->
+				<div class="Clear"></div>
+			</div>
+			<div id="Footer">
+				<div id="ButtonArea" style="text-align: left;">
+					<button class="BtnPrint" title="Print Quote Summary"><strong>Print</strong> Quote Summary</button>
+					<button class="BtnEmail" title="Email Quote Summary"><strong>Email</strong> Quote Summary</button>
+				</div>
+				<div id="VeriSign"></div>
+			</div>
+			<div id="Disclaimer">
+				<p>A preliminary rate quote ("quote") is for insurance coverage you select. Certain assumptions may have been made that will influence the quote you receive. A quote is not an offer for insurance, an offer of an insurance contract, nor is it an insurance contract, binder or an application to purchase insurance. The coverage descriptions provided are general descriptions of available coverage and are not a statement of contract. Rates quoted reflect the rates in effect as of the date of this quote and are subject to revision. Your actual premium may vary once you speak to an agent, based upon additional information you provide or we obtain, the coverages and deductibles that you select, any additional underwriting criteria, and removal of any assumptions. To obtain coverage, you must have an application submitted by a Farmers agent. Farmers reserves the right to accept, reject, or modify this quote after review of the application and other underwriting information. All applications are subject to underwriting approval. Farmers online quotes are for new customers only. Existing customers are requested to contact their local agent to make changes to their policy. Quoted rates do not include fees permitted by state law.</p>
+				<p style="color: #444;">Prefer to contact an agent yourself? <a class="LinkRight" href="#">Click here</a></p>
+			</div>
+			<ul id="BottomNav">
+				<li><a href="http://www.farmers.com/privacy_policy.html" target="_blank" title="Privacy Policy">Privacy Policy</a></li>
+				<li><a href="http://www.farmers.com/legal_disclaimer.html" target="_blank" title="Legal Disclaimer">Legal Disclaimer</a></li>
+				<li style="background: none;"><a href="http://www.farmers.com/contact_us.html" target="_blank" title="Contact Us">Contact Us</a></li>
+			</ul>
+		</div>
+		</form>
+	</body>
+</html>

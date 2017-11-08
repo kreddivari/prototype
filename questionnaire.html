@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Drivers | Next Generation Fast Quote ~ Farmers Insurance</title>
+		<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/base/jquery-ui.css" type="text/css" media="all" /> 
+		<link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> 
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script> 
+		<script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/tags/latest/external/jquery.bgiframe-2.1.2.js"></script> 
+		<script type="text/javascript" src="js/typecast_1.4.js"></script>
+		<script type="text/javascript" src="js/typecast.config.js"></script>
+		<script type="text/javascript" src="js/jquery.bvalidator.js"></script>
+		<script type="text/javascript" src="js/modal.js"></script>
+		<script type="text/javascript">
+		    window.onload = go;
+		    function go() {
+		        Typecast.Init();
+		    }
+		    function onFocusInfo(id) {
+		        $('#myform').bValidator().onFocusInfo(id);
+		    }
+		    function onFocusOut(id) {
+		        $('#myform').bValidator().onFocusOut(id);
+		    }
+
+		    function addDriver() {
+
+		        if (document.forms[0].radio3[0].checked == true) {
+//		            setCookie("Driver1", document.getElementById("FirstNameAdd").value + " " + document.getElementById("LastNameAdd").value);
+//		            document.getElementById('FirstNameAdd').value = '';
+//		            document.getElementById('LastNameAdd').value = '';
+		            window.location = "drivers_add.html"; //?" + document.getElementById("hidText").value;
+		            return false;
+		        }
+
+		        else if (document.forms[0].radio3[1].checked == true) {
+
+		            window.location = "discounts.html"; //?" + window.location.search.substring(1);
+		            return false;
+		        }
+		    }
+		    function setCookie(c_name, value) {
+		        var c_value = value;
+		        document.cookie = c_name + "=" + c_value;
+		    }
+		    function getCookie(c_name) {
+		        var i, x, y, ARRcookies = document.cookie.split(";");
+		        for (i = 0; i < ARRcookies.length; i++) {
+		            x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+		            y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+		            x = x.replace(/^\s+|\s+$/g, "");
+		            if (x == c_name) {
+		                return unescape(y);
+		            }
+		        }
+		    }
+		    function load() {
+		        var dropdownText;
+		        dropdownText = "<label for='MainlyDrives' title='Mainly drives'>Mainly drives</label>&nbsp;"
+		        dropdownText = dropdownText + "<select name='MainlyDrives' id='MainlyDrives' data-bvalidator='request' onFocus='onFocusInfo(this.id);'>";
+		        dropdownText = dropdownText + "<option>Select</option>";
+		        dropdownText = dropdownText + "<option value='choose'>" + getCookie("Vehicle1") + "</option>";
+		        dropdownText = dropdownText + "<option value='choose'>" + getCookie("Vehicle2") + "</option>";
+		        dropdownText = dropdownText + "<option value='choose'>" + getCookie("Vehicle3") + "</option>";
+		        dropdownText = dropdownText + "</select>";
+		        document.getElementById("CreateVehicle").innerHTML = dropdownText;
+
+		        var firstDriver = getCookie("Driver1");
+		        document.getElementById("FirstNameAdd").value = firstDriver.substring(0, firstDriver.indexOf(" "));
+		        document.getElementById("LastNameAdd").value = firstDriver.substring(firstDriver.indexOf(" "));
+		        text1 = "<ul><li><a class='PeoMale' href='#' title='1: " + firstDriver + "'>1</a><button id='Removed' title='Removed This Vehicle'><span>Removed</span></button></li>"
+		        text1 = text1 + "<li class='Sel'><a class='PeoAdd' href='#' title='Add Driver'>Add Driver</a></li></ul>";
+		        text1 = text1 + "<div id='Selected'>First Driver Added.</div>";
+		        document.getElementById("Selector").innerHTML = text1;
+		    }
+		    $(function () {
+		        $("#datepicker").datepicker({
+		            showOn: "button",
+		            buttonImage: "images/ico_calendar.png",
+		            buttonImageOnly: true,
+		            changeMonth: true,
+		            changeYear: true,
+		            showAnim: 'slideDown',
+		            yearRange: '1900:2000'
+		        });
+		    });
+
+		    $(document).ready(function () {
+		        $('#myform').bValidator();
+		    });
+		</script>
+		<style type="text/css">
+
+#toggle-view {	list-style:none; font-family:arial; font-size:11px;	margin:0; padding:0; width:300px;}
+#toggle-view li {margin:0 ; border-bottom:0 solid #ccc; position:relative; cursor:pointer;}
+#toggle-view p {display:none;}	
+.MyLink:hover { TEXT-DECORATION: underline; }
+				
+</style>
+<script type="text/javascript">
+
+$(document).ready(function () {
+	
+	$('#toggle-view li').click(function () {
+
+		var text = $(this).children('p');
+	
+		if (text.is(':hidden')) {
+			text.slideDown('200');
+			$(this).children('span');		
+		} else {
+			text.slideUp('200');
+			$(this).children('span');		
+		}
+		
+	});
+
+});
+
+</script>
+<script type="text/javascript">
+
+var flag1 = false;
+ 
+function testvalues(flag)
+{
+  var val = flag;
+  if(val==1){
+	flag1 = true
+	}
+  var isvalid = true;
+  if(flag1){
+  for (var i=1;i<4;i++)
+  {
+    
+    var radio = document.forms["myform"]["radio"+i];
+    
+    var labelanswer = document.getElementById("answer"+i);
+    labelanswer.style.background="none";
+ 
+       if (!radio[0].checked && !radio[1].checked)
+    {      
+      labelanswer.style.background="#FFFFAE";
+      isvalid = false;
+    }
+  }
+}
+  // return the result
+  return isvalid;
+}
+ 
+</script>	
+
+		<style>
+			#Content label { width: 215px; }
+		</style>
+	</head>
+	<body onload="load();">
+		<div id="BlackOut" style="display: none;"></div>
+		<div id="popUpDivSS" class="SecureSite" style="display: none;">
+			<div class="ModalClose" title="Close Window" onClick="popupSS('popUpDivSS')"></div>
+			<div class="ModalHdr">
+				<h2>Secure Site</h2>
+			</div>
+			<div class="ModalTxt">
+				<p><img src="images/verisign_secured.png" align="right" vspace="5" />We know it's important that you have same confidence using your credit card online as you do wehn you step into Smart vision check. That's why we take steps to ensure out site is secure - to help protect you from credit card theft or misuse.</p>
+				<p>To help protect your credit card number and personal information, we encrypt every policy purchase. Encryption is a process by which we use software to scramble your credit card number and personal information.</p>
+			</div>
+			<div class="ModalBtns"><button class="BtnGreen" onClick="popupSS('popUpDivSS')">Close</button></div>
+		</div>
+		
+		
+		<div id="Document">
+			<div id="Logo" title="Farmers&reg;"></div>
+			<div id="TopNav">
+				<ul>
+					<li id="Title" title="Auto Insurance Quote for the state of California"><span>SVC #14918654</span></li>
+					<li id="Secure"><a href="javascript://" title="Information is secure" onClick="popupSS('popUpDivSS')">Information is secure</a></li>
+					<li><a href="faqs.html" target="_blank" title="Help &amp; FAQs"><b>?</b> Help &amp; FAQs</a></li>
+				</ul>
+			</div>
+			<div id="BoxArea">
+				<ul id="ProgressBar">
+					<li id="PbInfo"><a href="info.html" title="Step 1: Your Information" ><span>Completed</span> Your Info</a></li>
+					<li id="PbVehicles"><a href="questionnaire.html"  class="Sel"><span>Step 2:</span> Questionnaire</a></li>
+					<li id="PbDrivers"><a href="test.html" ><span>Step 3:</span> Vision Test</a></li>					
+					<li id="PbQuote"><a href="report.html" ><span>Step 4:</span> Reports</a></li>
+				</ul>
+				<div id="AgentInfo" title="Joe Agent">
+					<div id="AgentPhoto"></div>
+					<p>
+						<b>Alecia Pickney</b><br>
+						Americus, GA<br>
+						<span id="AgentPhone">(480) 555-1234</span>
+						<button class="BtnGreen" title="Call Now">Call Now</button>
+					</p>
+				</div>
+<!-- Content Starts -->
+				<div id="Intro" class="IconDrivers">
+					<h1 title="Drivers to Insure">Vision questionnaire</h1>
+					<p>Please answer all the questions carefully</p>
+					<p><small style="color: #376b9d; font-weight: 900;">All fields are required.</small></p>
+				</div>
+				<div id="Content">
+					<div class="Box">
+						<div id="Selector">
+							<ul>
+								<li class="Sel"><a href="javascript://" class="PeoFirst" title="Driver">User</a></li>
+							</ul>
+						</div>
+                        	<form id="myform" onsubmit="return testvalues(1);">
+						<h2>Hello: <p style="color: #376b9d; font-weight: 900;"><b>Jordan Williams</b></p></h2>
+						
+					
+						<fieldset class="DrivingHistory">
+							<h2 title="Driving History">Vision History</h2>
+							<div class="Required">
+								<p><label for="HistorySaftey" title="Has this driver completed a driver's safety course within the past 3 years?">Do you ever feel that problems with your 
+vision make it difficult for you to do the 
+things you would like to do? </label>
+								<span id="answer1"><input type="radio" name="radio1" value="Yes" onchange="return testvalues(0);">Yes
+								<input type="radio" name="radio1" value="No" onchange="return testvalues(0);">No</span></p>
+								<a class="TT" href="javascript://"><span class="tooltip"><span class="top"></span><span class="middle">
+								Do you ever feel that problems with your 
+vision make it difficult for you to do the 
+things you would like to do?</span><span class="bottom"></span></span></a>
+							</div>
+							<div class="Required">
+								<p><label for="HistoryAccidents" title="Does this driver have any accidents or violations within the last 3 years?">
+								Can you see the large print hea
+dlines in the newspaper?   </label>
+								<span id="answer2"><input type="radio" name="radio2" value="Yes" onchange="return testvalues(0);">Yes
+								<input type="radio" name="radio2" value="No" onchange="return testvalues(0);" >No</span></p>
+								<a class="TT" href="javascript://"><span class="tooltip"><span class="top"></span><span class="middle">
+								Can you see the large print hea
+dlines in the newspaper?   </span><span class="bottom"></span></span></a>
+							</div>
+							
+							<div class="Required">
+								<p><label for="AnotherDriver" title="Do you have another driver?">
+								Can you see the regular print in newspapers, magazines or books?</label>
+								<span id="answer3"><input type="radio" name="radio3" value="Yes" onchange="return testvalues(0);">Yes
+								<input type="radio" name="radio3" value="No" onchange="return testvalues(0);">No</span></p>
+							</div>
+						
+								
+					
+							<div class="Required">
+								<p><label for="AnotherDriver" title="Do you have another driver?">Can you see the numbers and names in
+ a telephone directory?     
+?</label>
+								<span id="answer3"><input type="radio" name="radio3" value="Yes" onchange="return testvalues(0);">Yes
+								<input type="radio" name="radio3" value="No" onchange="return testvalues(0);">No</span></p>
+							</div>
+						
+						
+								
+					
+							<div class="Required">
+								<p><label for="AnotherDriver" title="Do you have another driver?">When you are walking in the street, can 
+you see the "walk" sign and street name 
+signs?    </label>
+								<span id="answer3"><input type="radio" name="radio3" value="Yes" onchange="return testvalues(0);">Yes
+								<input type="radio" name="radio3" value="No" onchange="return testvalues(0);">No</span></p>
+							</div>
+						
+								
+					
+							<div class="Required">
+								<p><label for="AnotherDriver" title="Do you have another driver?">When crossing the street, do cars s
+eem to appear very suddenly?   </label>
+								<span id="answer3"><input type="radio" name="radio3" value="Yes" onchange="return testvalues(0);">Yes
+								<input type="radio" name="radio3" value="No" onchange="return testvalues(0);">No</span></p>
+							</div>
+						
+								
+					
+							<div class="Required">
+								<p><label for="AnotherDriver" title="Do you have another driver?">Does trouble with your vision make it diffi
+cult for you to watc
+h TV, play cards, do 
+sewing, or any similar type of activity?    </label>
+								<span id="answer3"><input type="radio" name="radio3" value="Yes" onchange="return testvalues(0);">Yes
+								<input type="radio" name="radio3" value="No" onchange="return testvalues(0);">No</span></p>
+							</div>
+						
+								
+					
+							<div class="Required">
+								<p><label for="AnotherDriver" title="Do you have another driver?"> 
+Does trouble with your vision make it di
+fficult for you to see labels on medicine 
+bottles?    </label>
+								<span id="answer3"><input type="radio" name="radio3" value="Yes" onchange="return testvalues(0);">Yes
+								<input type="radio" name="radio3" value="No" onchange="return testvalues(0);">No</span></p>
+							</div>
+						
+								
+					
+							<div class="Required">
+								<p><label for="AnotherDriver" title="Do you have another driver?"> Does trouble with your vision make it diffi
+cult for you to read price
+s when you shop?    </label>
+								<span id="answer3"><input type="radio" name="radio3" value="Yes" onchange="return testvalues(0);">Yes
+								<input type="radio" name="radio3" value="No" onchange="return testvalues(0);">No</span></p>
+							</div>
+						
+								
+					
+							<div class="Required">
+								<p><label for="AnotherDriver" title="Do you have another driver?"> Does trouble with your vision make it difficult
+ for you to read your own 
+mail?          </label>
+								<span id="answer3"><input type="radio" name="radio3" value="Yes" onchange="return testvalues(0);">Yes
+								<input type="radio" name="radio3" value="No" onchange="return testvalues(0);">No</span></p>
+							</div>
+						
+								
+					
+							<div class="Required">
+								<p><label for="AnotherDriver" title="Do you have another driver?">Does trouble with your vision make it diffi
+cult for you to read 
+your own handwriting?    </label>
+								<span id="answer3"><input type="radio" name="radio3" value="Yes" onchange="return testvalues(0);">Yes
+								<input type="radio" name="radio3" value="No" onchange="return testvalues(0);">No</span></p>
+							</div>
+						
+								
+					
+							<div class="Required">
+								<p><label for="AnotherDriver" title="Do you have another driver?"> Can you recognize the face
+s of family or friends when
+ they are across an average 
+size room?    </label>
+								<span id="answer3"><input type="radio" name="radio3" value="Yes" onchange="return testvalues(0);">Yes
+								<input type="radio" name="radio3" value="No" onchange="return testvalues(0);">No</span></p>
+							</div>
+						
+								
+					
+							<div class="Required">
+								<p><label for="AnotherDriver" title="Do you have another driver?"> Do you have any particular diffi
+culty seeing in dim light?  </label>
+								<span id="answer3"><input type="radio" name="radio3" value="Yes" onchange="return testvalues(0);">Yes
+								<input type="radio" name="radio3" value="No" onchange="return testvalues(0);">No</span></p>
+							</div>
+						
+								
+					
+							<div class="Required">
+								<p><label for="AnotherDriver" title="Do you have another driver?"> Do you tend to sit very
+ close to the television?  </label>
+								<span id="answer3"><input type="radio" name="radio3" value="Yes" onchange="return testvalues(0);">Yes
+								<input type="radio" name="radio3" value="No" onchange="return testvalues(0);">No</span></p>
+							</div>
+						
+						</fieldset>
+					
+					</div>
+				</div>
+				
+<!-- Content Ends -->
+				<div class="Clear"></div>
+			</div>
+			<div id="Footer">
+				<div><a class="LinkLeft" href="vehicles.html" title="Back to Vehicles">Back to <strong>Vehicles</strong></a></div>
+				<div id="ButtonArea">
+					<button class="Btn" title="Continue" onclick="return addDriver();"><strong>Continue</strong></button>
+				</div>
+				<div id="VeriSign"></div>
+			</div>
+			
+		</div>
+			<input type="hidden" id="hidText" value="">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/base/jquery-ui.css" type="text/css" media="all" /> 
+		<link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> 
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script> 
+	
+		<script type="text/javascript">
+		function showPayment(){		
+		$("#PaymentMethod").show();
+		
+		}
+		</script>
+
+	</head>
+	<body>
+	
+    <div id="BlackOut" style="display: none;"></div>
+	<div id="popUpDivSS" class="SecureSite" style="display: none;">
+			<div class="ModalClose" title="Close Window" onClick="popupSS('popUpDivSS')"></div>
+			<div class="ModalHdr">
+				<h2>Secure Site</h2>
+			</div>
+			<div class="ModalTxt">
+				<p><img src="images/verisign_secured.png" align="right" vspace="5" />We know it's important that you have same confidence using your credit card online as you do wehn you step into Smart vision check. That's why we take steps to ensure out site is secure - to help protect you from credit card theft or misuse.</p>
+				<p>To help protect your credit card number and personal information, we encrypt every policy purchase. Encryption is a process by which we use software to scramble your credit card number and personal information.</p>
+			</div>
+			<div class="ModalBtns"><button class="BtnGreen" onClick="popupSS('popUpDivSS')">Close</button></div>
+		</div>
+		
+		
+		<div id="Document">
+			<div id="Logo" title="Farmers&reg;"></div>
+			<div id="TopNav">
+				<ul>
+					<li id="Title" title="Auto Insurance Quote for the state of California"><span>SVC #14918654</span></li>
+					<li id="Secure"><a href="javascript://" title="Information is secure" onClick="popupSS('popUpDivSS')">Information is secure</a></li>
+					<li><a href="faqs.html" target="_blank" title="Help &amp; FAQs"><b>?</b> Help &amp; FAQs</a></li>
+				</ul>
+			</div>
+			<div id="BoxArea">
+				<ul id="ProgressBar">
+					<li id="PbInfo"><a href="info.html" title="Step 1: Your Information" ><span>completed</span> Your Info</a></li>
+					<li id="PbVehicles"><a href="questionnaire.html"  ><span>completed</span> Questionnaire</a></li>
+					<li id="PbDrivers"><a href="test.html" ><span>completed</span> Vision Test</a></li>					
+					<li id="PbQuote"><a href="report.html" class="Sel"><span>Step 4:</span> Reports</a></li>
+				</ul>
+				<div id="AgentInfo" title="Joe Agent">
+					<div id="AgentPhoto"></div>
+					<p>
+						<b>Alecia Pickney</b><br>
+						Americus, GA<br>
+						<span id="AgentPhone">(480) 555-1234</span>
+						<button class="BtnGreen" title="Call Now">Call Now</button>
+					</p>
+				</div>
+                	
+<!-- Content Starts -->
+				<div id="Intro" class="IconQuote">
+					<h1 title="Your Farmers rate quote!">Your Vision check Report!</h1>
+					<p>Review, Email or Print your report. <i></i>, By the successful payment of the vision check charges <b></b> <a class="LinkLeft" href="#"></a></p>
+				</div>
+		<div id="Content">
+					<div class="Results">
+						<ul>
+							<li onClick="location.href='quote_basic.html';" style="cursor: pointer;">
+								<h2>Cash</h2>
+								<p class="Price"><span>$</span>20<span>.80</span></p>
+								
+							</li>
+							<li onClick="location.href='report.html';" style="cursor: pointer;">
+								<h2>Credit card</h2>
+								<p class="Price"><span>$</span>23<span>.23</span></p>
+								
+							</li>
+							<li class="Sel">
+								<h2>Debit card</h2>
+								<p class="Price"><span>$</span>23<span>.23</span></p>
+								
+								
+							</li>
+						</ul>
+					</div>
+					<div class="Box">
+										<div id="PaymentMethod">
+							<div class="PaymentMethodHeader">
+								<h2>Payment Method</h2>
+								<p>Changing your payment option may affect the premium amount.</p>
+								<div id="VeriSign"></div>
+							</div>
+                             <fieldset>
+							<fieldset>
+								
+								
+								<div class="Required">
+									<label for="AccountHolderName" title="Account Holder Name">Card Holder Name</label>
+									<input type="text" name="AccountHolderName" id="AccountHolderName" maxlength="100" value="" data-bvalidator="alpha,required" onFocus="this.className='Focus'; onFocusInfo(this.id);" onBlur="this.className='FocusOff'; onFocusOut(this.id)" />
+								</div></fieldset>
+								<fieldset>
+								<div class="Required">
+									<label for="RoutingNumber" title="Routing Number"><a href="#dialog4" name="modal">Card Number</a></label>
+									<input type="text" name="RoutingNumber" id="RoutingNumber" maxlength="100" value="" data-bvalidator="digit,required" onFocus="this.className='Focus'; onFocusInfo(this.id);" onBlur="this.className='FocusOff'; onFocusOut(this.id)" />
+											</div></fieldset>
+											<fieldset>
+											<div class="Required">
+									<label for="RoutingNumber" title="Routing Number"><a href="#dialog4" name="modal">Expiry Date</a></label>
+									<input type="text" name="RoutingNumber" id="RoutingNumber" maxlength="100" value="" data-bvalidator="digit,required" onFocus="this.className='Focus'; onFocusInfo(this.id);" onBlur="this.className='FocusOff'; onFocusOut(this.id)" />
+											</div></fieldset>
+											<fieldset>
+								<div class="Required">
+									<label for="BankAccountNumber" title="Bank Account Number"><a href="#dialog4" name="modal">Billing Address</a></label>
+									<input type="text" name="BankAccountNumber" id="BankAccountNumber" maxlength="100" value="" data-bvalidator="digit,required" onFocus="this.className='Focus'; onFocusInfo(this.id);" onBlur="this.className='FocusOff'; onFocusOut(this.id)" />
+											</div></fieldset>
+											<fieldset>
+								<div class="Required">
+									<label for="BankAccountNumber" title="Bank Account Number"><a href="#dialog4" name="modal"> Address</a></label>
+									<input type="text" name="BankAccountNumber" id="BankAccountNumber" maxlength="100" value="" data-bvalidator="digit,required" onFocus="this.className='Focus'; onFocusInfo(this.id);" onBlur="this.className='FocusOff'; onFocusOut(this.id)" />
+										</div></fieldset>
+										<fieldset>
+								<div class="Required">
+									<label for="BankAccountNumber" title="Bank Account Number"><a href="#dialog4" name="modal"> City</a></label>
+									<input type="text" name="BankAccountNumber" id="BankAccountNumber" maxlength="100" value="" data-bvalidator="digit,required" onFocus="this.className='Focus'; onFocusInfo(this.id);" onBlur="this.className='FocusOff'; onFocusOut(this.id)" />
+										</div></fieldset>
+										<fieldset>
+										<div class="Required">
+									<label for="BankAccountNumber" title="Bank Account Number"><a href="#dialog4" name="modal"> State</a></label>
+									<input type="text" name="BankAccountNumber" id="BankAccountNumber" maxlength="100" value="" data-bvalidator="digit,required" onFocus="this.className='Focus'; onFocusInfo(this.id);" onBlur="this.className='FocusOff'; onFocusOut(this.id)" />
+										</div>
+										</fieldset>
+							</fieldset>
+							<fieldset style="padding: 0 0 20px 0;">
+								<div class="Required" id="Terms">
+									<input type="checkbox" name="AgreeTerms" id="AgreeTerms" value="Agree" data-bvalidator="required">
+									<label for="AgreeTerms" title="I have read and agree to the Payment Method Storage Terms and Authorization agreement for direct payment (ACH debits)">I have read and agree to the <a href="#dialog6" name="modal">Payment Method Storage Terms and Authorization agreement</a> for direct payment (ACH debits)</label>
+								</div>
+							</fieldset>
+							<fieldset>
+							
+							<div id="ButtonArea">
+							<form action="congratulations.html" name="congratulations">
+				<!--	<input class="Btn" type="submit" value="OK - Start my Quote" onclick="return addDriver();"></input> -->
+                    <button class="Btn" title="OK - Start my Quote"><strong>OK</strong> - Continue to Buy</button>
+					</form>
+                   </div>
+</fieldset>							
+						</div>
+						<div id="accordion">
+					
+							
+				
+						</div>
+					</div>
+				
+					
+				</div>
+				
+<!-- Content Ends -->
+				<div class="Clear"></div>
+			</div>
+			<div id="Footer">
+				
+			</div>
+			
+		</div>
+		
+	</body>
+</html>

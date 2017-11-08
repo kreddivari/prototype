@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/base/jquery-ui.css" type="text/css" media="all" /> 
+		<link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> 
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script> 
+		<script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/tags/latest/external/jquery.bgiframe-2.1.2.js"></script> 
+		<script type="text/javascript" src="js/jquery.bvalidator.js"></script>
+		<script type="text/javascript">
+			window.onload = go;
+			function go() {
+				Typecast.Init();
+			}
+			function onFocusInfo(id) {
+				$('#myform').bValidator().onFocusInfo(id);
+			}
+			function onFocusOut(id) {
+				$('#myform').bValidator().onFocusOut(id);
+			}
+				
+			
+		    $(document).ready(function () {
+			$('#myform').bValidator(); 
+			});
+		
+			</script>
+		<style>
+			#Content label { width: 215px; }
+		</style>
+	</head>
+	<body>
+		<form id="myform" method="post" action="info.html">
+		<div id="Document">
+			<div id="Logo" title="Farmers&reg;"></div>
+			<div id="TopNav">
+				<ul>
+					<li id="Secure"><a href="javascript://" title="Information is secure" onClick="popupSS('popUpDivSS')">Information is secure</a></li>
+					<li><a href="" target="_blank" title="Help &amp; FAQs"><b>?</b> Help &amp; FAQs</a></li>
+				</ul>
+			</div>
+			<div id="BoxArea">
+<!-- Content Starts -->
+				<div id="Intro" class="IconWelcome">
+					<h1 title="Welcome to Farmers&reg; FastQuote&trade;">Welcome to Smart Vision Check&trade;</h1>
+					<p>Get a free, no-obligation vision report in about five to ten minutes.<br>You could save hundreds of dollars when you switch to Smart Vision Check!</p>
+				</div>
+				<div id="Content">
+					<div class="Box">
+						<div id="Selector">
+							<ul>
+								<li class="Sel"><a class="QtNew" href="javascript://"><input type="radio" name="Quote" value="Get a New Quote" checked="checked">Start New</a></li>
+								<li><a class="QtSaved" href="javascript://"><input type="radio" name="Quote" value="Retrieve Saved Quote" data-bvalidator="required">Retrieve Saved</a></li>
+							</ul>
+							<div id="Selected" class="Welcome">For vision check, vending glasses.</div>
+						</div>
+						<fieldset style="border: 0; padding-top: 4px;">
+							<div class="Required">
+								<label for="QuoteType" title="Quote Type">Select  Type</label>
+								<select name="QuoteType" id="QuoteType" data-bvalidator="request" onFocus="onFocusInfo(this.id);">
+                                      <option>Select</option>
+                                    <option value="choose">Quick Tour</option>
+									<option value="choose">Dafault from start</option>
+                                    <option value="choose">Vision check</option>
+                                    <option value="choose">Select Glasses</option>
+                                    <option value="choose">Vend Glasses</option>
+                                    <option value="choose">Payment</option>
+								</select>
+							</div>
+							
+						</fieldset>
+					</div>
+				</div>
+				<div id="RightRail">
+					<h4 title="What to save more money?">What to save more money?</h4>
+					<p>New customers report average savings of hundreds of dollars a year when they switch to Smart vision check.</p>
+					<p>Obtain your online help today.</p>
+				</div>
+<!-- Content Ends -->
+				<div class="Clear"></div>
+			</div>
+			<div id="Footer">
+				<div id="ButtonArea">
+					<button class="Btn" title="Start Quote"><strong>Start</strong> </button>
+				</div>
+				<div id="VeriSign"></div>
+			</div>
+			
+			<ul id="BottomNav">
+				<li><a href="" target="_blank" title="Privacy Policy">Privacy Policy</a></li>
+				
+			</ul>
+		</div>
+		</form>
+	</body>
+</html>

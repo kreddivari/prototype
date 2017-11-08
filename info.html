@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Your Information | Next Generation Fast Quote ~ Farmers Insurance</title>
+		<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/base/jquery-ui.css" type="text/css" media="all" /> 
+		<link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> 
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script> 
+		<script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/tags/latest/external/jquery.bgiframe-2.1.2.js"></script> 
+		<script type="text/javascript" src="js/typecast_1.4.js"></script>
+		<script type="text/javascript" src="js/typecast.config.js"></script>
+		<script type="text/javascript" src="js/jquery.bvalidator.js"></script>
+		<script type="text/javascript" src="js/modal.js"></script>
+		<script type="text/javascript">
+			window.onload = go;
+			function go() {
+				Typecast.Init();
+			}
+			function onFocusInfo(id) {
+				$('#myform').bValidator().onFocusInfo(id);
+			}
+			function onFocusOut(id) {
+				$('#myform').bValidator().onFocusOut(id);
+			}
+
+			function setCookie(c_name, value) {
+			    var c_value = value;
+			    document.cookie = c_name + "=" + c_value;
+			}
+			function getCookie(c_name) {
+			    var i, x, y, ARRcookies = document.cookie.split(";");
+			    for (i = 0; i < ARRcookies.length; i++) {
+			        x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+			        y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+			        x = x.replace(/^\s+|\s+$/g, "");
+			        if (x == c_name) {
+			            return unescape(y);
+			        }
+			    }
+			}
+			function addDriver() {
+			    setCookie("Driver1", document.getElementById("FirstName").value + " " + document.getElementById("LastName").value);
+//			    alert(getCookie("Driver1"));
+			       window.location = "vehicles.html"; //?" + document.getElementById("hidText").value;
+			        return false;
+			    
+			}
+
+			$(document).ready(function () {
+				$('#myform').bValidator(); 
+			});
+		</script>
+		<style type="text/css">
+
+#toggle-view {	list-style:none; font-family:arial; font-size:11px;	margin:0; padding:0; width:300px;}
+#toggle-view li {margin:0 ; border-bottom:0 solid #ccc; position:relative; cursor:pointer;}
+#toggle-view p {display:none;}	
+.MyLink:hover { TEXT-DECORATION: underline; }
+				
+</style>
+ 
+<script type="text/javascript">
+
+$(document).ready(function () {
+	
+	$('#toggle-view li').click(function () {
+
+		var text = $(this).children('p');
+	
+		if (text.is(':hidden')) {
+			text.slideDown('200');
+			$(this).children('span');		
+		} else {
+			text.slideUp('200');
+			$(this).children('span');		
+		}
+		
+	});
+
+});
+
+</script>
+        <style>
+			#Content label { width: 135px; }
+		</style>
+<script type="text/javascript">
+
+var flag1 = false;
+ 
+function testvalues(flag)
+{
+  var val = flag;
+  if(val==1){
+	flag1 = true
+	}
+  var isvalid = true;
+  if(flag1){
+  for (var i=1;i<2;i++)
+  {
+    
+    var radio = document.forms["myform"]["radio"+i];
+    
+    var labelanswer = document.getElementById("answer"+i);
+    labelanswer.style.background="none";
+ 
+       if (!radio[0].checked && !radio[1].checked)
+    {      
+      labelanswer.style.background="#FFFFAE";
+      isvalid = false;
+    }
+  }
+}
+  // return the result
+  return isvalid;
+}
+ 
+</script>		
+	</head>
+	<body>
+		<div id="BlackOut" style="display: none;"></div>
+		<div id="popUpDivSS" class="SecureSite" style="display: none;">
+			<div class="ModalClose" title="Close Window" onClick="popupSS('popUpDivSS')"></div>
+			<div class="ModalHdr">
+				<h2>Secure Site</h2>
+			</div>
+			<div class="ModalTxt">
+				<p><img src="images/verisign_secured.png" align="right" vspace="5" />We know it's important that you have same confidence using your credit card online as you do wehn you step into Smart vision check. That's why we take steps to ensure out site is secure - to help protect you from credit card theft or misuse.</p>
+				<p>To help protect your credit card number and personal information, we encrypt every policy purchase. Encryption is a process by which we use software to scramble your credit card number and personal information.</p>
+			</div>
+			<div class="ModalBtns"><button class="BtnGreen" onClick="popupSS('popUpDivSS')">Close</button></div>
+		</div>
+		
+		
+		<div id="Document">
+			<div id="Logo" title="Farmers&reg;"></div>
+			<div id="TopNav">
+				<ul>
+					<li id="Title" title="Auto Insurance Quote for the state of California"><span>SVC #14918654</span></li>
+					<li id="Secure"><a href="javascript://" title="Information is secure" onClick="popupSS('popUpDivSS')">Information is secure</a></li>
+					<li><a href="faqs.html" target="_blank" title="Help &amp; FAQs"><b>?</b> Help &amp; FAQs</a></li>
+				</ul>
+			</div>
+			<div id="BoxArea">
+				<ul id="ProgressBar">
+					<li id="PbInfo"><a href="info.html" title="Step 1: Your Information" class="Sel"><span>Step 1:</span> Your Info</a></li>
+					<li id="PbVehicles"><a href="questionnaire.html" ><span>Step 2:</span> Questionnaire</a></li>
+					<li id="PbDrivers"><a href="test.html" ><span>Step 3:</span> Vision Test</a></li>					
+					<li id="PbQuote"><a href="report.html" ><span>Step 4:</span> Reports</a></li>
+				</ul>
+				<div id="AgentInfo" title="Joe Agent">
+					<div id="AgentPhoto"></div>
+					<p>
+						<b>Alecia Pickney</b><br>
+						Americus, GA<br>
+						<span id="AgentPhone">(480) 555-1234</span>
+						<button class="BtnGreen" title="Call Now">Call Now</button>
+					</p>
+				</div>
+<!-- Content Starts -->
+				<div id="Intro" class="IconInfo">
+					<h1 title="Tell us about yourself">Tell us about yourself</h1>
+					
+					<p><small style="color: #376b9d; font-weight: 900;">All fields are required.</small></p>
+				</div>
+				<div id="Content">
+					<div class="Box">
+                    <form id="myform"  action="vehicles.html" onsubmit="return testvalues(1);">
+						<fieldset>
+							<div class="Required">
+								<label for="FirstName" title="First Name">First Name</label>
+								<input type="text" name="FirstName" id="FirstName" maxlength="100" value="" data-bvalidator="alpha,required" onFocus="this.className='Focus'; onFocusInfo(this.id);" onBlur="this.className='FocusOff'; onFocusOut(this.id);" />
+							</div>
+							<div class="Required">
+								<label for="LastName" title="Last Name">Last Name</label>
+								<input type="text" name="LastName" id="LastName" maxlength="100" value="" data-bvalidator="alpha,required" onFocus="this.className='Focus'; onFocusInfo(this.id);" onBlur="this.className='FocusOff'; onFocusOut(this.id);" />
+							</div>
+							<div class="Required">
+								<label for="datepicker" title="Date of Birth">Date of Birth</label>
+								<input type="text" name="datepicker" id="datepicker" maxlength="10" value=" " style="width: 125px;" class="TCMask[##/##/####,MM/DD/YYYY]" data-bvalidator="date[mm/dd/yyyy],required" onclick="onFocusInfo(this.id);" onFocus="this.className='Focus'; onFocusInfo(this.id);" onBlur="this.className='FocusOff'; onFocusOut(this.id);" />
+								<a class="TT" href="javascript://"><span class="tooltip"><span class="top"></span><span class="middle">This helps us make the process an accurate.</span><span class="bottom"></span></span></a>
+							</div>
+							<div class="Required">
+								<p><label for="Gender" title="Gender">Gender</label>
+								<span id="answer1"><input type="radio" name="radio1" value="Male" onchange="return testvalues(0);">Male
+								<input type="radio" name="radio1" value="Female" onchange="return testvalues(0);">Female</span></p>
+							</div>
+						</fieldset>
+						<fieldset>
+							<div class="Required">
+								<label for="Address" title="Address">Address</label>
+								<input type="text" name="Address" id="Address" maxlength="100" value="" data-bvalidator="alphanum,required" onFocus="this.className='Focus'; onFocusInfo(this.id);" onBlur="this.className='FocusOff'; onFocusOut(this.id);" />
+							</div>
+							<div class="Required">
+								<label for="City" title="City">City</label>
+								<input type="text" name="City" id="City" maxlength="100" value="" data-bvalidator="alpha,required" onFocus="this.className='Focus'; onFocusInfo(this.id);" onBlur="this.className='FocusOff'; onFocusOut(this.id);" />
+							</div>
+							<div class="Required">
+								<label for="State" title="State">State</label>
+								<input type="text" name="State" id="State" value="" style="width: 160px; background-color: #ebebe4;"  data-bvalidator="alpha,required" onFocus="this.className='Focus'; onFocusInfo(this.id);" onBlur="this.className='FocusOff'; onFocusOut(this.id);" />
+							</div>
+							<div class="Required">
+								<label for="ZipCode" title="Zip Code">Zip Code</label>
+								<input type="text" name="ZipCode" id="ZipCode" maxlength="5" value="" data-bvalidator="digit,required" onFocus="this.className='Focus'; onFocusInfo(this.id);" onBlur="this.className='FocusOff'; onFocusOut(this.id);" />
+							</div>
+						</fieldset>
+						<fieldset>
+							<div class="Required">
+								<label for="Phone" title="Phone">Phone</label>
+								<input type="text" name="Phone" id="Phone" maxlength="14" value="(xxx) xxx-xxxx" class="TCMask[(###) ###-####,(xxx) xxx-xxxx]" data-bvalidator="digit,required" onFocus="this.className='Focus'; onFocusInfo(this.id);" onBlur="this.className='FocusOff'; onFocusOut(this.id);" />
+							</div>
+							<div class="Required">
+								<label for="Email" title="E-mail">E-mail</label>
+								<input type="text" name="Email" id="Email" maxlength="100" value="" data-bvalidator="email,required"  onFocus="this.className='Focus'; onFocusInfo(this.id);" onBlur="this.className='FocusOff'; onFocusOut(this.id);" />
+								<a class="TT" href="javascript://"><span class="tooltip"><span class="top"></span><span class="middle">We'll email you the report. Your email will never be shared or sold.</span><span class="bottom"></span></span></a>
+							</div>
+						</fieldset>
+						
+					</div>
+				</div>
+				<div id="RightRail">
+					<!--<h4 title="You'll Love Farmers">You'll Love Farmers</h4>
+					<ul>
+						<li><b>Personal service</b> from a local, professional insurance agent</li>
+						<li>24/7 award-winning, <b>HelpPoint&reg;</b> Claims Services</li>
+						<li>Dozens of <b>discount's to save</b> you hundreds</li>
+					</ul>-->
+					<h4 title="Common Questions">Common Questions</h4>
+					<ul id="FAQs">
+                    <ul id="toggle-view">
+	               	
+						<li class="Expand">
+							<h5 title="Can I call someone now if I have questions while getting a quote?" class="MyLink">Can I call someone now if I have questions while getting a quote?</h5>
+							<p>Yes, you can click on the '<b>Call Now</b>' button Monday-Friday, 8am to 5pm local time to speak to an agent immediately.  Once you complete a quote, a Farmers agent will be contacting you to discuss your insurance options.</p>
+						
+                        </li>
+                      
+						<li class="Expand">
+							<h5 title="How do I retrieve my saved quote later?" class="MyLink">How do I retrieve my saved quote later?</h5>
+							<p>To retrieve you saved quote we will need your last name, date of birth, zip code and your quote number or email address.  If you are unable to retrieve your quote, please contact your Farmers agent for assistance.</p>
+						
+                        </li>
+                        </ul>
+					</ul>
+				</div>
+<!-- Content Ends -->
+				<div class="Clear"></div>
+			</div>
+			<div id="Footer">
+				<div id="ButtonArea">
+				<!--	<input class="Btn" type="submit" value="OK - Start my Quote" onclick="return addDriver();"></input> -->
+                    <button class="Btn" title="OK - Start my Quote"><strong>OK</strong> - Start Vision Check</button>
+                   </div>
+				<div id="VeriSign"></div>
+			</div>
+			
+		</div>
+			<input type="hidden" id="hidText" value="">
+		</form>
+	</body>
+</html>

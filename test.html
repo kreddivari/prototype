@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/base/jquery-ui.css" type="text/css" media="all" /> 
+		<link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> 
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script> 
+		<script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/tags/latest/external/jquery.bgiframe-2.1.2.js"></script> 
+		<script type="text/javascript" src="js/typecast_1.4.js"></script>
+		<script type="text/javascript" src="js/typecast.config.js"></script>
+		<script type="text/javascript" src="js/jquery.bvalidator.js"></script>
+		<script type="text/javascript" src="js/modal.js"></script>
+		<script type="text/javascript">
+				var NumberOfWords = 28;
+
+var words = new BuildArray(NumberOfWords);
+
+// Use the following variables to 
+// define your random words:
+words[1] = "escapology"
+words[2] = "brightwork"
+words[3] = "verkrampte"
+words[4] = "protectrix"
+words[5] = "nudibranch"
+words[6] = "grandchild"
+words[7] = "newfangled"
+words[8] = "flugelhorn"
+words[9] = "mythologer"
+words[10] = "pluperfect"
+words[11] = "jellygraph"
+words[12] = "quickthorn"
+words[13] = "rottweiler"
+words[14] = "technician"
+words[15] = "cowpuncher"
+words[16] = "middlebrow"
+words[17] = "jackhammer"
+words[18] = "triphthong"
+words[19] = "wunderkind"
+words[20] = "dazzlement"
+words[21] = "jabberwock"
+words[22] = "witchcraft"
+words[23] = "pawnbroker"
+words[24] = "thumbprint"
+words[25] = "motorcycle"
+words[26] = "cryptogram"
+words[27] = "torchlight"
+words[28] = "bankruptcy"
+
+function BuildArray(size){
+this.length = size
+for (var i = 1; i <= size; i++){
+this[i] = null}
+return this
+}
+function randomColors() {
+var rnd = Math.ceil(Math.random() * NumberOfWords);
+document.getElementById('wordbox').innerHTML="";
+document.getElementById('wordbox').innerHTML +="<div style='color:#" + Math.floor(Math.random()*4096).toString(16) + ";font-size: " + Math.floor(Math.random()*24+12) + "px;'>"+words[rnd]+"</div>";
+ document.getElementById('wordbox').innerHTML +="<div style='margin-top:20px;color:#" + Math.floor(Math.random()*4096).toString(16) + ";font-size: " + Math.floor(Math.random()*24+52) + "px;'>"+words[rnd+4]+"</div>";
+  document.getElementById('wordbox').innerHTML +="<div style='margin-top:40px;color:#" + Math.floor(Math.random()*4096).toString(16) + ";font-size: " + Math.floor(Math.random()*24+32) + "px;'>"+words[rnd+2]+"</div>";
+      
+	 
+	  }
+		</script>
+		<style type="text/css">
+
+#toggle-view {	list-style:none; font-family:arial; font-size:11px;	margin:0; padding:0; width:300px;}
+#toggle-view li {margin:0 ; border-bottom:0 solid #ccc; position:relative; cursor:pointer;}
+#toggle-view p {display:none;}	
+.MyLink:hover { TEXT-DECORATION: underline; }
+				
+</style>
+
+<script type="text/javascript">
+
+$(document).ready(function () {
+	
+	$('#toggle-view li').click(function () {
+
+		var text = $(this).children('p');
+
+		if (text.is(':hidden')) {
+			text.slideDown('200');
+			$(this).children('span');		
+		} else {
+			text.slideUp('200');
+			$(this).children('span');		
+		}
+		
+	});
+
+});
+
+</script>
+		
+		<style>
+			#Content label { width: 158px; }
+		</style>
+	</head>
+	<body>
+		<div id="BlackOut" style="display: none;"></div>
+		
+		<div id="popUpDivSS" class="SecureSite" style="display: none;">
+			<div class="ModalClose" title="Close Window" onClick="popupSS('popUpDivSS')"></div>
+			<div class="ModalHdr">
+				<h2>Secure Site</h2>
+			</div>
+			<div class="ModalTxt">
+				<p><img src="images/verisign_secured.png" align="right" vspace="5" />We know it's important that you have same confidence using your credit card online as you do wehn you step into Smart vision check. That's why we take steps to ensure out site is secure - to help protect you from credit card theft or misuse.</p>
+				<p>To help protect your credit card number and personal information, we encrypt every policy purchase. Encryption is a process by which we use software to scramble your credit card number and personal information.</p>
+			</div>
+			<div class="ModalBtns"><button class="BtnGreen" onClick="popupSS('popUpDivSS')">Close</button></div>
+		</div>
+		
+		
+		<div id="Document">
+			<div id="Logo" title="Farmers&reg;"></div>
+			<div id="TopNav">
+				<ul>
+					<li id="Title" title="Auto Insurance Quote for the state of California"><span>SVC #14918654</span></li>
+					<li id="Secure"><a href="javascript://" title="Information is secure" onClick="popupSS('popUpDivSS')">Information is secure</a></li>
+					<li><a href="faqs.html" target="_blank" title="Help &amp; FAQs"><b>?</b> Help &amp; FAQs</a></li>
+				</ul>
+			</div>
+			<div id="BoxArea">
+				<ul id="ProgressBar">
+					<li id="PbInfo"><a href="info.html" title="Step 1: Your Information" ><span>completed</span> Your Info</a></li>
+					<li id="PbVehicles"><a href="questionnaire.html"  ><span>completed</span> Questionnaire</a></li>
+					<li id="PbDrivers"><a href="test.html" class="Sel"><span>Step 3:</span> Vision Test</a></li>					
+					<li id="PbQuote"><a href="report.html" ><span>Step 4:</span> Reports</a></li>
+				</ul>
+				<div id="AgentInfo" title="Joe Agent">
+					<div id="AgentPhoto"></div>
+					<p>
+						<b>Alecia Pickney</b><br>
+						Americus, GA<br>
+						<span id="AgentPhone">(480) 555-1234</span>
+						<button class="BtnGreen" title="Call Now">Call Now</button>
+					</p>
+				</div>
+<!-- Content Starts -->
+				<div id="Intro" class="IconVehicles">
+					<h1 title="Vehicles to Insure">Please follow the Test instructions</h1>
+					
+					<p><small style="color: #376b9d; font-weight: 900;">Click the generate Button to generate the random Text.</small></p>
+				</div>
+				<div id="Content">
+					<div class="Box" style="width:500px;height:500px;">
+						<div name="wordBox" id="wordbox"></div>
+			
+					</div>
+					<button class="BtnGreen" style="font-size:14px;title="Call Now" onClick="randomColors();">Generate</button>
+				</div>
+		
+<!-- Content Ends -->
+				<div class="Clear"></div>
+			</div>
+			<div id="Footer">
+				<div><a class="LinkLeft" href="info.html" title="Back to Your Information">Back to <strong>Your Information</strong></a></div>
+				<div id="ButtonArea">
+					<!--<button class="Btn" title="Continue"><strong>Continue</strong></button>-->
+					<input class="Btn" type="submit" value="Continue" title="Continue" onclick="return Navigate();"></input> 
+				</div>
+				<div id="VeriSign"></div>
+			</div>
+			
+		</div>
+		<input type="hidden" id="hidText" value="">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,622 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Modal | Farmers&reg;</title>
+		<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+		<style>
+			body { background: none; }
+			#popUpDiv, #popUpDiv2, #popUpDiv3, #popUpDiv4, #popUpDiv5, #popUpDivSS { margin-top: 25px; position: relative; margin: 25px auto; }
+			#BlackOut { height: 10000px; }
+		</style>
+	</head>
+	<body>
+		<div id="BlackOut"></div>
+		
+		<div id="popUpDiv2" class="ComparePaymentOptions">
+			<div class="ModalClose" title="Close Window" onClick="popup2('popUpDiv2')"></div>
+			<div class="ModalHdr">
+				<h2>Compare Payment Options</h2>
+				<p>Choose a payment option that works best for you.</p>
+			</div>
+			<div class="ModalTxt">
+				<table>
+					<thead>
+						<tr>
+							<th>Payment Plan</th>
+							<th colspan="2">Due Today</th>
+							<th>Payment Schedule</th>
+							<th>Next Payment</th>
+							<th>Total Due</th>
+						</tr>
+					</thead>
+					<tr>
+						<td><input type="radio" name="PaymentPlan" value="Monthly Automatic Payments" /> Monthly Automatic Payments</td>
+						<td>$<strong>403.50</strong></td>
+						<td>in</td>
+						<td>6 Payments <small>next payment on: <span>06/25/11</span></small></td>
+						<td>$403.50</td>
+						<td>$2421.00</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="PaymentPlan" value="Monthly Automatic Credit Card Payments" checked="checked" /> Monthly Automatic Credit Card Payments</td>
+						<td>$<strong>403.50</strong></td>
+						<td>in</td>
+						<td>6 Payments <small>next payment on: <span>06/25/11</span></small></td>
+						<td>$403.50</td>
+						<td>$2421.00</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="PaymentPlan" value="Monthly Payments" /> Monthly Payments</td>
+						<td>$<strong>605.25</strong></td>
+						<td>in</td>
+						<td>6 Payments <small>next payment on: <span>06/25/11</span></small></td>
+						<td>$363.20</td>
+						<td>$2421.25</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="PaymentPlan" value="Pay in Full" /> Pay in Full</td>
+						<td>$<strong>2421.00</strong></td>
+						<td></td>
+						<td>N/A</td>
+						<td>N/A</td>
+						<td>$2421.00</td>
+					</tr>
+				</table>
+			</div>
+			<div class="ModalBtns"><button class="BtnGreen" onClick="popup2('popUpDiv2')">Continue</button></div>
+		</div>
+
+		<div id="popUpDiv" class="EOI">
+			<div class="ModalClose" title="Close Window" onClick="popup('popUpDiv')"></div>
+			<div class="ModalHdr">
+				<h2>Temporary Evidence of Insurance Card</h2>
+			</div>
+			<iframe src="images/eoi.pdf"></iframe>
+			<div class="ModalBtns">
+				<button class="BtnGreen">Print</button>
+			</div>
+		</div>
+
+		<div id="popUpDiv" class="VIN">
+			<div class="ModalClose" title="Close Window" onClick="popup('popUpDiv')"></div>
+			<div class="ModalHdr">
+				<h2>VIN Number Locations</h2>
+			</div>
+			<div class="ModalTxt">
+				<ol>
+					<li>Dashboard on the driver side of vehicle</li>
+					<li>Driver side door by latch.</li>
+				</ol>
+			</div>
+			<img src="images/popup_vin.png" />
+			<div class="ModalBtns"><button class="BtnGreen" onClick="popup('popUpDiv')">Close</button></div>
+		</div>
+		
+		<div id="popUpDiv2" class="FindCar">
+			<div class="ModalClose" title="Close Window" onClick="popup('popUpDiv')"></div>
+			<div class="ModalHdr">
+				<h2>Can't find your car?</h2>
+			</div>
+			<div class="ModalTxt">
+				<p>We do not provide online quotes for specialty cars. Try entering your VIN number or contact a Farmers agent for assistance.</p>
+			</div>
+			<div class="ModalBtns"><button class="BtnGreen">Continue</button></div>
+		</div>
+		
+		<div id="popUpDiv" class="Error">
+			<div class="ModalClose" title="Close Window" onClick="popup('popUpDiv')"></div>
+			<div class="ModalHdr">
+				<h2>Type of Error</h2>
+			</div>
+			<div class="ModalTxt">
+				<p>Detailed error message description.</p>
+			</div>
+			<div class="ModalBtns"><button class="BtnGreen" onClick="popup('popUpDiv')">Close</button></div>
+		</div>
+		
+		<div id="popUpDiv" class="Error">
+			<div class="ModalClose" title="Close Window" onClick="popup('popUpDiv')"></div>
+			<div class="ModalHdr">
+				<h2>MyFarmers is currently unavailable.</h2>
+			</div>
+			<div class="ModalTxt">
+				<p>We apologize. "My Farmers" system is currently unavailable due to system maintenance. It will be back up shortly. Please come back and try again.</p>
+			</div>
+			<div class="ModalBtns"><button class="BtnGreen">Continue</button></div>
+		</div>
+		
+		<div id="popUpDiv" class="Error">
+			<div class="ModalClose" title="Close Window" onClick="popup('popUpDiv')"></div>
+			<div class="ModalHdr">
+				<h2>Quoting is currently unavailable.</h2>
+			</div>
+			<div class="ModalTxt">
+				<p>We apologize. Quoting is unavailable in your area. Please change your zip code or contact a Farmers agent for assistance.</p>
+			</div>
+			<div class="ModalBtns"><button class="BtnGreen">Continue</button></div>
+		</div>
+
+		<div id="popUpDiv" class="Error">
+			<div class="ModalClose" title="Close Window" onClick="popup('popUpDiv')"></div>
+			<div class="ModalHdr">
+				<h2>Are you sure?</h2>
+			</div>
+			<div class="ModalTxt">
+				<p>Changing your zip code will require you to re-enter the information you have already provided.</p>
+			</div>
+			<div class="ModalBtns">
+				<button class="BtnGray">Change Zip</button>
+				<button class="BtnGreen" onClick="popup('popUpDiv')">Close</button>
+			</div>
+		</div>
+
+		
+
+		<div id="popUpDiv" class="VehicleInsure">
+			<div class="ModalClose" title="Close Window" onClick="popup('popUpDiv')"></div>
+			<div class="ModalHdr">
+				<h2>Vehicles to Insure</h2>
+				<p>To save time, we've collected some information from your prior insurance carrier. Select the vehicles you'd like to include on this quote and click '<b>Continue</b>'. On the next page, you can complete your vehicle information or add unlisted vehicle.</p>
+			</div>
+			<div class="ModalTxt">
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th>Vehicle</th>
+						</tr>
+					</thead>
+					<tr>
+						<td><input type="checkbox" name="AddVehicles" value="2006 VOLKSWAGEN JETTA" /></td>
+						<td>2006 VOLKSWAGEN JETTA</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="AddVehicles" value="2004 MERCEDES BENZ CL CLASS 2D 2WD 500" /></td>
+						<td>2004 MERCEDES BENZ CL CLASS 2D 2WD 500</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="AddVehicles" value="2003 BMW 325IT SW" /></td>
+						<td>2003 BMW 325IT SW</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="AddVehicles" value="2002 VOLKSWAGEN GOLF 2D GL" /></td>
+						<td>2002 VOLKSWAGEN GOLF 2D GL</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="AddVehicles" value="2002 VOLVO S60 4D 2WD T5" /></td>
+						<td>2002 VOLVO S60 4D 2WD T5</td>
+					</tr>
+				</table>
+			</div>
+			<div class="ModalBtns"><button class="BtnGreen">Continue</button></div>
+		</div>
+		
+		<div id="popUpDiv" class="PaymentOptions">
+			<div class="ModalClose" title="Close Window" onClick="popup('popUpDiv')"></div>
+			<div class="ModalHdr">
+				<h2>Payment Options</h2>
+				<p>Pay in Full: <strong>$800.00</strong> <em>(saves up to $5.00 per month)</em></p>
+			</div>
+			<div class="ModalTxt">
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th>Jun 21st</th>
+							<th>Jul 21st</th>
+							<th>Aug 21st</th>
+							<th>Sept 21st</th>
+							<th>Oct 21st</th>
+							<th>Nov 21st</th>
+						</tr>
+					</thead>
+					<tr>
+						<td class="ColGrp">Pay in Full</td>
+						<td>$800.00</td>
+						<td>NA</td>
+						<td>NA</td>
+						<td>NA</td>
+						<td>NA</td>
+						<td>NA</td>
+					</tr>
+					<tr>
+						<td class="ColGrp">Monthly</td>
+						<td>$165.72</td>
+						<td>$164.82</td>
+						<td>$164.82</td>
+						<td>$164.82</td>
+						<td>$164.82</td>
+						<td>$164.82</td>
+					</tr>
+					<tr>
+						<td class="ColGrp">Monthly Automatic</td>
+						<td>$139.09</td>
+						<td>$138.19</td>
+						<td>$138.19</td>
+						<td>$138.19</td>
+						<td>$138.19</td>
+						<td>$138.15</td>
+					</tr>
+				</table>
+				<p>
+					<small>
+						* Monthly and Monthly Automatic payments include additional service charges. Enrollment in automatic deduction from a checking account or credit card is required to continue with this payment plan.<br />
+						Monthly savings is calculated based on 6 payments made during a 6 month policy term.<br />
+					</small>
+				</p>
+			</div>
+			<div class="ModalBtns"><button class="BtnGreen">Continue</button></div>
+		</div>
+
+		<div id="popUpDiv" class="PrimaryDriver">
+			<div class="ModalClose" title="Close Window" onClick="popup('popUpDiv')"></div>
+			<div class="ModalHdr">
+				<h2>Please select a primary driver for the vehicle(s) listed below.</h2>
+				<p>Each driver should be selected as a primary driver on at least one vehicle.</p>
+			</div>
+			<div class="ModalTxt">
+				<table>
+					<thead>
+						<tr>
+							<th width="100%">Vehicle Description</th>
+							<th>Primary Driver</th>
+                            <th>Vehicle Usage</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>1999 Dodge Caravan</td>
+						<td>
+							<select name="PrimaryDriver1" id="PrimaryDriver1">
+								<option>Please Select</option>
+							</select>
+						</td>
+                        <td>
+                        	<select name="Vehicle Usage" id="Vehicle Usage">
+								<option>Please Select</option>
+							</select>
+                        </td>
+					</tr>
+					<tr>
+						<td>2002 Mercedes S430</td>
+						<td>
+							<select name="PrimaryDriver2" id="PrimaryDriver2">
+								<option>Please Select</option>
+							</select>
+						</td>
+                        <td>
+                        	<select name="Vehicle Usage" id="Vehicle Usage">
+								<option>Please Select</option>
+							</select>
+                        </td>
+					</tr>
+					<tr>
+						<td>2003 Mitsubishi Lancer</td>
+						<td>
+							<select name="PrimaryDriver3" id="PrimaryDriver3">
+								<option>Please Select</option>
+							</select>
+						</td>
+                         <td>
+                        	<select name="Vehicle Usage" id="Vehicle Usage">
+								<option>Please Select</option>
+							</select>
+                        </td>
+					</tr>
+                    <tr>
+						<td>1999 Dodge Caravan</td>
+						<td>
+							<select name="PrimaryDriver1" id="PrimaryDriver1">
+								<option>Please Select</option>
+							</select>
+						</td>
+                        <td>
+                        	<select name="Vehicle Usage" id="Vehicle Usage">
+								<option>Please Select</option>
+							</select>
+                        </td>
+					</tr>
+				</table>
+			</div>
+			<div class="ModalBtns"><button class="BtnGreen">Next</button></div>
+		</div>
+
+		<div id="popUpDiv" class="AssignVehicles">
+			<div class="ModalClose" title="Close Window" onClick="popup('popUpDiv')"></div>
+			<div class="ModalHdr">
+				<h2>Assign Your Vehicles</h2>
+				<p>You're almost done. To continue, please assign each vehicle to a driver.</p>
+			</div>
+			<div class="ModalTxt">
+				<table>
+					<thead>
+						<tr>
+							<th width="100%">Driver</th>
+							<th>Vehicle</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>John Smith <small>(Primary Applicant)</small></td>
+						<td>
+							<select name="AssignedVehicle" id="AssignedVehicle">
+								<option>Please Select</option>
+								<option value="2011 Volkswagen Jetta SE 4D 2WD">2011 Volkswagen Jetta SE 4D 2WD</option>
+								<option value="2010 Volkswagen Golf TDI 2D 2WD">2010 Volkswagen Golf TDI 2D 2WD</option>
+								<option value="2000 Volkswagen GTI 2D 2WD">2000 Volkswagen GTI 2D 2WD</option>
+								<option value="1954 Porsche 356 Speedster 2.0 2D 2WD">1954 Porsche 356 Speedster 2.0 2D 2WD</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Jane Smith</td>
+						<td>
+							<select name="AssignedVehicle2" id="AssignedVehicle2">
+								<option>Please Select</option>
+								<option value="2011 Volkswagen Jetta SE 4D 2WD">2011 Volkswagen Jetta SE 4D 2WD</option>
+								<option value="2010 Volkswagen Golf TDI 2D 2WD">2010 Volkswagen Golf TDI 2D 2WD</option>
+								<option value="2000 Volkswagen GTI 2D 2WD">2000 Volkswagen GTI 2D 2WD</option>
+								<option value="1954 Porsche 356 Speedster 2.0 2D 2WD">1954 Porsche 356 Speedster 2.0 2D 2WD</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Kevin Smith</td>
+						<td>
+							<select name="AssignedVehicle3" id="AssignedVehicle3">
+								<option>Please Select</option>
+								<option value="2011 Volkswagen Jetta SE 4D 2WD">2011 Volkswagen Jetta SE 4D 2WD</option>
+								<option value="2010 Volkswagen Golf TDI 2D 2WD">2010 Volkswagen Golf TDI 2D 2WD</option>
+								<option value="2000 Volkswagen GTI 2D 2WD">2000 Volkswagen GTI 2D 2WD</option>
+								<option value="1954 Porsche 356 Speedster 2.0 2D 2WD">1954 Porsche 356 Speedster 2.0 2D 2WD</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Sammy Smith</td>
+						<td>
+							<select name="AssignedVehicle4" id="AssignedVehicle4">
+								<option>Please Select</option>
+								<option value="2011 Volkswagen Jetta SE 4D 2WD">2011 Volkswagen Jetta SE 4D 2WD</option>
+								<option value="2010 Volkswagen Golf TDI 2D 2WD">2010 Volkswagen Golf TDI 2D 2WD</option>
+								<option value="2000 Volkswagen GTI 2D 2WD">2000 Volkswagen GTI 2D 2WD</option>
+								<option value="1954 Porsche 356 Speedster 2.0 2D 2WD">1954 Porsche 356 Speedster 2.0 2D 2WD</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="ModalBtns"><button class="BtnGreen">Continue</button></div>
+		</div>
+		
+		<div id="popUpDiv" class="RegisterMyFarmers">
+			<div class="ModalClose" title="Close Window" onClick="popup('popUpDiv')"></div>
+			<div class="ModalHdr">
+				<h2>Register for "My Farmers"</h2>
+				<p>All form fields are required.</p>
+			</div>
+			<div class="ModalTxt">
+				<div class="Required">
+					<label for="UserName">User Name</label>
+					<input type="text" name="UserName" id="UserName" onFocus="this.className='Focus';" onBlur="this.className='FocusOff';"/>
+				</div>
+				<div class="Required">
+					<label for="Password">Password</label>
+					<input type="password" name="Password" id="Password" onFocus="this.className='Focus';" onBlur="this.className='FocusOff';" />
+				</div>
+				<div class="Required">
+					<label for="ConfirmPassword">Confirm Password</label>
+					<input type="password" name="ConfirmPassword" id="ConfirmPassword" onFocus="this.className='Focus';" onBlur="this.className='FocusOff';" />
+				</div>
+				<div class="Required">
+					<label for="SecurityQuestion">Security Question</label>
+					<select name="SecurityQuestion" id="SecurityQuestion">
+						<option>Please Select</option>
+						<option>Question 1</option>
+						<option>Question 2</option>
+						<option>Question 3</option>
+						<option>Question 4</option>
+					</select>
+				</div>
+				<div class="Required">
+					<label for="SecurityAnswer">Security Answer</label>
+					<input type="text" name="SecurityAnswer" id="SecurityAnswer" onFocus="this.className='Focus';" onBlur="this.className='FocusOff';" />
+				</div>
+				<div class="Required">
+					<label for="ConfirmSecurityAnswer">Confirm Security Answer</label>
+					<input type="text" name="ConfirmSecurityAnswer" id="ConfirmSecurityAnswer" onFocus="this.className='Focus';" onBlur="this.className='FocusOff';" />
+				</div>
+				<div class="ModalTerms">
+					<h3>Please review the Terms and Conditions in order to continue with your Online Enrollment.</h3>
+					<p>These terms were last updated on October 31, 2007.</p>
+					<p>These terms of use ("Legal Terms") describe the terms and conditions applicable to your access and use of the Farmers Insurance Group of Companies&reg; or Farmers&reg; ("Farmers" or the "Farmers companies") web site (the "Web Site"). By using this Web Site, you are accepting and agreeing to these Legal Terms. If you do not agree to all of these Legal Terms, do not use this Web Site.</p> 
+					<p>Farmers may modify this Web Site and the rules and regulations governing its access and use, at any time. Any modification will be included in these Legal Terms, so please check back when you use the Web Site. By continuing use of the Web Site after such changes are posted, you will be deemed to have accepted such changes.</p>
+					<h3>Scope of Use</h3>
+					<p>Farmers invites you to view, use and download materials at this Web Site for your informational, non-commercial use, provided that you leave all the copyright notices or other proprietary notices intact. You may not store, modify, reproduce, transmit, distribute, repost, publicly display or otherwise use any content on this Web Site, or the design or layout of the Web Site or individual sections of it, in any form or media except with the express prior written permission of Farmers. The commercial use, reproduction, reposting, public display, transmission or distribution of any information, software, logo or other material available through the Web Site without the prior written consent of Farmers is strictly prohibited.</p>
+					<p>You understand that Farmers may, at any time, for any reason and without notice, discontinue, change or restrict your use of this Web Site and make changes in the products and/or services described in this Web Site. </p>
+					<h3>Eligibility for Insurance Products and Services </h3>
+					<p>Not all of the products or services described on this Web Site are available in all geographic areas of the United States. You may not be eligible for all of the insurance products or services described in this Web Site. Farmers reserves the right to determine all eligibility for such products or services in its sole discretion.</p>
+					<h3>No Professional Advice</h3>
+					<p>The information available on the Web Site is intended to be a general information resource regarding the matters covered, but is not offered as legal, accounting or other professional advice, and is not tailored to your specific circumstance. You should evaluate all information, opinions and advice available on this Web Site in consultation with your insurance specialist.</p>
+					<h3>No Warranties</h3>
+					<p>The Web Site, any content, opinions or advice on the Web Site, and any products or services available through the Web Site (collectively, "Materials") are provided to you on an "as is," "as available" basis without warranty of any kind either express or implied, including but not limited to any implied warranties of merchantability, fitness for a particular purpose, quiet enjoyment, systems integration, accuracy, and non-infringement. These Materials include online calculators available through the Web Site. The member companies of the Farmers Insurance Group of Companies&reg; and Farmers Group, Inc. do not endorse and make no warranty as to the accuracy, completeness, currency, or reliability of the Materials. Farmers makes no representations or warranties that use of the Materials will be uninterrupted or error-free. You are responsible for taking all necessary precautions to ensure that any Materials you may obtain are free of viruses or any other harmful components. This warranty disclaimer may be different in connection with specific products and services offered by Farmers. The information and descriptions contained herein are not necessarily intended to be complete descriptions of all terms, exclusions and conditions applicable to the products and services, but are provided solely for general informational purposes; please refer to the actual policy or the relevant product or services agreement for the governing terms. Some states do not allow the disclaimer of implied warranties, so the foregoing disclaimer may not apply to you if you are a resident of any such state. You may also have other legal rights that vary from state to state.</p>
+					<h3>Limitation of Liability</h3>
+					<p>Your use of the Materials is at your own risk. Farmers specifically disclaims any liability, whether based in contract, tort, negligence, strict liability or otherwise, for any direct, indirect, incidental, consequential, or special damages arising out of or in any way connected with access to, use of or reliance on the Materials (even if Farmers or a Farmers representative has been advised of the possibility of such damages) or that arise in connection with mistakes or omissions in, or delays in transmission of, information to or from the user, interruptions in telecommunications connections to the Web Site or viruses that may infect your computer equipment or other property, whether caused in whole or in part by negligence, acts of God, telecommunications failure, theft or destruction of, or unauthorized access to the Web Site or the Materials. This limitation of liability may be different in connection with specific products and services offered by Farmers. Some states do not allow the limitation of liability, so the foregoing limitation may not apply to you.</p>
+					<h3>Trademarks</h3>
+					<p>"Farmers&reg;," "Farmers Insurance Group&reg;," "Farmers Insurance Group of Companies&reg;," the "sunburst logo" "Farmers Insurance Group, Symbol of Superior Service&reg;," "Farmers Friendly Review&reg;," "America Can Depend on Farmers&reg;," "Farmers. Gets You Back Where You Belong&reg;", and HelpPoint&reg;, are the principal service marks used by Farmers. Farmers also claims service mark, or trademark rights, in a number of related marks as noted in this Web Site by the use of the symbols "&reg;," "SM," or "TM." Nothing contained on this Web Site should be construed as granting, by implication, estoppel, or otherwise, any license or right to use any trademark displayed on this Web Site without the prior written permission of Farmers. Unauthorized use of any Farmers trademarks, service marks or logos is strictly prohibited and may be a violation of federal and state trademark laws.</p>
+					<h3>Copyright</h3>
+					<p>This Web Site is protected by U.S. and foreign copyright laws. Except as expressly provided under "Scope of Use" section above, you may not use, reproduce, modify, transmit, distribute, publicly display or perform this Web Site without Farmers' prior written permission. </p>
+					<h3>Visitor Submissions</h3>
+					<p>By providing information or materials to this Web Site (other than personal information subject to Farmers Privacy Policy), you grant to Farmers an unrestricted, irrevocable, worldwide, royalty-free license to use, reproduce, display, publicly perform, and transmit such information and materials for any purpose, including without limitation, disclosing any such information and materials as necessary to satisfy any law, regulation, or governmental request. You agree not to submit or transmit any e-mails or materials through the Web Site that (I) are defamatory, threatening, obscene or harassing, (ii) contain a virus, worm, Trojan horse or any other harmful component, (iii) incorporate copyrighted or other proprietary material of any third party without that party's permission or (iv) otherwise violate any applicable laws. Farmers shall not be subject to any obligations of confidentiality regarding any information or materials that you submit except as specified in Farmers Privacy Policy, as set forth in any additional terms and conditions relating to specific products or services, or as otherwise specifically agreed or required by law.</p>
+					<h3>Third-Party Services</h3>
+					<p>Farmers offers links to other web sites operated by other entities as a convenience to you. Farmers makes no representation regarding the content or accuracy of any web site that you may access through this one. Farmers does not monitor and is not responsible for the content found on other web sites that are linked from this Web Site. Inclusion of these links on Farmers' Web Site does not imply endorsement, recommendation or sponsorship for any linked web site or the services, products or advice described on the site. The views, opinions, statements, offers or other information or content expressed therein are those of the respective author(s) or distributor(s) and not Farmers.</p>
+					<p>Unless otherwise set forth in a written agreement between you and a Farmers® company, you must adhere to Farmers' linking policy as follows: (i) any link to the Web Site must be a text only link clearly marked "farmers.com," (ii) the appearance, position and other aspects of the link may not be such as to damage or dilute the goodwill associated with Farmers' names and trademarks, (iii) the link must "point" to the URL (www.farmers.com) and not to other pages within the Web Site, (iv) the appearance, position and other attributes of the link may not create the false appearance that your organization or entity is sponsored by, affiliated with, or associated with Farmers, (v) when selected by a user, the link must display the Web Site on full-screen and not within a "frame" on the linking web site, and (vi) Farmers reserves the right to revoke its consent to the link at any time and in its sole discretion.</p>
+					<h3>Employment Opportunities</h3>
+					<p>Farmers is committed to the principles of equal employment opportunity. Applications are considered for all positions without regard to race, sex, sexual orientation, color, religion, national origin, age, disability (so long as such disability can be reasonably accommodated) or any other status protected by applicable law. Farmers encourages all qualified applicants to apply.</p>
+					<h3>E-mail</h3>
+					<p>E-mail submissions over the Internet may not be secure and are subject to the risk of interception by third parties. Please consider this fact before e-mailing any personal or confidential information.</p>
+					<h3>Security</h3>
+					<p>You are responsible for maintaining the confidentiality of your user name and password. You may not share your password with or transfer your password to any third party. You are responsible for all uses of your user name and password, and any and all related charges, whether or not authorized by you. You agree to immediately notify Farmers of any unauthorized use of your password or user name or any other breach of security. Farmers will not be liable for any loss that you may incur as a result of someone else using your password or user name, either with or without your knowledge. However, you could be held liable for losses incurred by Farmers or another party due to someone else using your user name or password.</p>
+					<h3>Violations and Additional Policies</h3>
+					<p>Farmers reserves the right to seek all remedies available at law and in equity for violations of the rules and regulations set forth in this Web Site, including the right to block access from a particular Internet address to the Web Site. Our policies regarding privacy are incorporated into these Legal Terms by reference. Farmers does not intend to market any products or services to children and does not knowingly collect personal information from children under the age of 13 through this Web Site.</p>
+					<h3>Governing Law, Location and Miscellaneous</h3>
+					<p>These Legal Terms shall be governed in all respects by the laws of the State of California USA, without reference to its choice of law rules. The Web Site is operated by Farmers Group, Inc., on behalf of the Farmers&reg; companies from its offices in Los Angeles, California. Farmers makes no representation that the content of this Web Site is appropriate or available for use in other locations, and access to this Web Site from territories where the content of this Web Site may be illegal is prohibited. Those who choose to access this Web Site from other locations do so on their own initiative and are responsible for compliance with applicable local laws. These Legal Terms and all documents incorporated herein by reference constitute the entire agreement between Farmers and you with respect to this Web Site.</p>
+					<h3>Arbitration</h3>
+					<p>Any controversy or claim arising out of or relating to these Legal Terms or this Web Site shall be settled by binding arbitration in accordance with the commercial arbitration rules of the American Arbitration Association. Any such controversy or claim shall be arbitrated on an individual basis, and shall not be consolidated in any arbitration with any claim or controversy of any other party. The arbitration shall be conducted in Los Angeles, California, and judgment on the arbitration award may be entered into any court having jurisdiction thereof.</p>
+					<h3>Disclosures</h3>
+					<p>The insurance products and services are offered by the Farmers Insurance Group&reg; insuring entities, located at 4680 Wilshire Boulevard, Los Angeles, California and at offices throughout the United States. Farmers New World Life Insurance Company is located at 3003 77th Ave., S.E., Mercer Island, WA 98040-2890 . If you are a California resident, you may have this same information e-mailed to you by sending a letter to the foregoing address with your e-mail address and a request for this information.</p>
+					<p>The Consumer Communications Bureau of the California Department of Insurance may be contacted in writing at 300 South Spring Street, South Tower, Los Angeles, CA 90013, or by telephone at (800) 927-HELP.</p>
+					<h3>Online Billing  (August 14, 2009)</h3>
+					<p>We are pleased to offer online billing services on Farmers.com as a part of your acceptance of the Terms and Conditions of this website. By agreeing to these additional Terms and Conditions and upon enrollment in My Farmers you will have the option to receive email billing for payment of your insurance premiums until you elect to discontinue this service, you are no longer insured by one of the Farmers® insuring entities, or the online billing service is terminated by Farmers Insurance Exchange or its affiliates (&rarr;Farmers&rarr;).</p>
+					<h3>Changes in Terms and Conditions.</h3>
+					<p>Farmers reserves the right, at its sole discretion, to modify, add or remove any portion of these Terms and Conditions, in whole or part, Upon any change, Farmers will notify you by a link to such new or different terms and conditions. If you continue to use the online billing service thereafter, your continued use of the service is your acceptance of the changes and agreement to be bound by the Terms and Conditions as amended. If you do not agree to the changes, you agree to discontinue your use of the online billing  service.</p>
+					<ol type="A">
+						<li><b>Service Limitations and Disclaimer of Warranties:</b> Our goal is to make your online billing experience a pleasant and productive one. However, we cannot always foresee or anticipate technical or other difficulties. These difficulties may result in loss of data, personalization settings or other service interruptions. You expressly understand and agree that: Your use of the on line billing service is at your sole risk. The service is provided on an "as is" and "as available" basis.  Farmers expressly disclaims all warranties of any kind, whether express or implied, including, but not limited to the implied warranties of merchantability, fitness for a particular purpose and non-infringement. Farmers make no warranty that (i) the service will meet your requirements, (ii) the service will be uninterrupted, timely, secure, or error-free, (iii) the results that may be obtained from the use of the service will be accurate or reliable, (iv) the quality of any products, services, information, or other material purchased or obtained by you through the service will meet your expectations, and (v) any errors in the technology will be corrected. Any material downloaded or otherwise obtained through the use of the service is done at your own discretion and risk and you are solely responsible for any damage to your computer system or loss of data that results from the download of any such material. No advice or information, whether oral or written, obtained by you from Farmers or through or from the service will create any warranty not expressly stated in these terms. Some jurisdictions do not allow the exclusion of certain warranties. Accordingly, some of the above limitations may not apply to you. To the extent that any part of this section is not consistent with any other part of these terms, then this section will control.</li>
+						<li><b>Limitation of Liability:</b>  You agree that Farmers will not be liable for any harms, which lawyers and courts often call direct, indirect, incidental, special, consequential or exemplary damages, including, but not limited to, damages for loss of profits, goodwill, use, data or other intangible losses, even if Farmers has been advised of the possibility of such damages, resulting from: (i) the use or the inability to use the service; (ii) the cost of getting substitute goods and services resulting from any products, data, information or services purchased or obtained or messages received or transactions entered into through or from the service; (iii) unauthorized access to or alteration of your transmissions or data; (iv) statements or conduct of anyone on the service; or (v) any other matter relating to the service. Some jurisdictions do not allow the limitation or exclusion of liability for incidental or consequential damages. Accordingly, some of the above limitations may not apply to you. </li>
+						<li><b>Indemnification:</b> You agree to protect and fully compensate Farmers and service providers from any and all third party claims, liability, damages, expenses and costs (including, but not limited to, reasonable attorneys fees) caused by or arising from your use of the services, your violation of the Terms or your infringement, or infringement by any other user of your account, of any intellectual property or other right of anyone.</li>
+						<li><b>Service Changes and Discontinuation:</b> Farmers reserves the right, at its sole discretion to       change or discontinue, temporarily or permanently, the online billing service at any time without notice. You agree that Farmers will not be liable to you or any third party for any modification or discontinuance of the online billing service.</li>
+						<li><b>Privacy Policy:</b> Farmers respects your privacy. We do not share information about you with unaffiliated third parties, except or unless authorized under the various federal and state privacy statutes. The information you provide enables us to provide services to you. It also enables us to give you updates about our service. Our Privacy Policy is a part of these Terms and Conditions and so you should read it.</li>
+						<li><b>Cancellation:</b> You may cancel your enrollment in the online billing service at any time by sending a request via our "Contact Us" form or choosing &rarr;Review my online profile&rarr; and clicking on &rarr;Deactivate&rarr;. When a specific customer ( User ID) is deactivated the company will remove payment methods, automatic payments, and any scheduled payments associated to the User ID that is deactivated, this would include resetting to paper billing. The payment methods will not be visible, however will remain available to the company to process refunds. Disclosures regarding storage of payment information for future refunds is included in the Payment Authorization and Storage Agreement located on the online billing application</li>
+						<li><b>Obey the Law:</b> You agree not to use the online billing service and system for illegal purposes or for the transmission of material that is unlawful, harassing, libelous (untrue and damaging to others), invasive of another's privacy, abusive, threatening, or obscene, or that infringes the rights of others.</li>
+					</ol>
+					<h3>Rights You Grant to Farmers</h3>
+					<ol type="A">
+						<li><b>Advertising:</b> You agree that Farmers may display advertisements and promotions of all kinds in and with the services and online billing system. </li>
+						<li><b>Online billing Account Access:</b> To ensure that Farmers is able to provide high quality services that are responsive to members' needs, you agree that Farmers employees may have access to your online billing account and records as reasonably needed to investigate complaints, and to conduct the business of Farmers in providing billing services for you.</li>
+						<li><b>Third Party Accounts:</b> By using this Web Site and online billing service, you authorize Farmers to access third party sites designated by you, on your behalf, to retrieve information requested by you and you hereby appoint Farmers as your agent for this limited purpose. You hereby permit Farmers to use information submitted by you to the Web Site, system and service to accomplish the foregoing.<br><br>You will be required to agree to additional terms regarding the storage and usage of banking and or credit card data.  Based on your billing platform, you may be required to agree to additional Terms & Conditions in order to pay your insurance premiums online.</li>
+					</ol>
+					<p>If any provision of these Terms is held to be unenforceable, then such provision shall be construed, as nearly as possible, to reflect the intentions of the parties with the other provisions remaining in full force and effect. The laws of the state of California apply to these Terms and Conditions. These Terms and Conditions are the entire understanding between you and Farmers about the online billing system and services.</p>
+				</div>
+				<p><small>You must check the 'I Agree' box and click 'Register' to proceed with Online Enrollment. <span class="IAgree"><input type="checkbox" name="IAgree">I Agree</small></span></p>
+			</div>
+			<div class="ModalBtns">
+				<button class="BtnGreen">Register</button>
+			</div>
+		</div>
+
+		<div id="popUpDiv" class="RegisterMyFarmers">
+			<div class="ModalClose" title="Close Window" onClick="popup('popUpDiv')"></div>
+			<div class="ModalHdr">
+				<h2>Congratulations</h2>
+				<p>You have successfully registered for "My Farmers".</p>
+			</div>
+			<div class="ModalTxt">
+				<p><b>Login to My Farmers to:</b></p>
+				<p>
+					<ul>
+						<li>View and manage your policy information</li>
+						<li>Pay your bill</li>
+						<li>Change your policy document delivery preferences</li>
+						<li>Report a claim</li>
+						<li>Contact your agent</li>
+					</ul>
+				</p>
+			</div>
+			<div class="ModalBtns">
+				<button class="BtnGreen">Login</button>
+			</div>
+		</div>
+		
+		<div id="popUpDiv4" class="CCV">
+			<div class="ModalClose" title="Close Window" onClick="popup4('popUpDiv4')"></div>
+			<div class="ModalHdr">
+				<h2>Credit Card Verification Code (CCV)</h2>
+				<p>The Verification Code is 3-digit, non-embossed number printed on the back of your Credit Card.</p>
+			</div>
+			<img src="images/popup_ccv.png" />
+			<div class="ModalBtns"><button class="BtnGreen" onClick="popup4('popUpDiv4')">Close</button></div>
+		</div>
+		
+		<div id="popUpDiv3" class="Check">
+			<div class="ModalClose" title="Close Window" onClick="popup3('popUpDiv3')"></div>
+			<div class="ModalHdr">
+				<h2>Routing Number &amp; Account Number</h2>
+			</div>
+			<img src="images/popup_check.png" />
+			<div class="ModalBtns"><button class="BtnGreen" onClick="popup3('popUpDiv3')">Close</button></div>
+		</div>
+		
+		<div id="popUpDiv5" class="AuthorizationAgreement">
+			<div class="ModalClose" title="Close Window" onClick="popup5('popUpDiv5')"></div>
+			<div class="ModalHdr">
+				<h2>Authorization Agreement</h2>
+			</div>
+			<div class="ModalTxt">
+				<div class="ModalTerms">
+					<h3>Company Name: Farmers Insurance Exchange and its affiliates ( members of the Farmers Insurance Group of Companies&reg;) (hereafter collectively referred to as "Farmers")</h3>
+					<p>By checking 'I agree', I request and authorize Farmers to collect my insurance premiums and other amounts due from me to Farmers by charging my credit/debit card or debiting my financial institution account either electronically or by any other method and I request and authorize my credit/debit card company or my financial institution to pay and charge such amounts to my account.</p>
+					<p>I understand Farmers website may create a small data file, or "cookie", on the hard drive of my computer in order to retain specific customer information. I am aware that Farmers takes my security seriously and has implemented various measures designed to ensure the confidentiality of my data and protect against unauthorized access to or use of such information.</p>
+					<p>Farmers continually reviews and enhances its security systems, and is compliant with the rules and regulations of the Payment Card Industry Data Security Standards ("PCI") and the rules and regulations governing the ACH network as established by NACHA- The Electronic Payment Association.</p>
+					<p>I understand that this authorization will remain in effect until Farmers has received written or online notification signifying termination of this agreement.</p>
+
+					<h3>Mailing Address:</h3>
+					<p>
+						Farmers Insurance Exchange<br>
+						4680 Wilshire Blvd<br>
+						Los Angeles, CA 90010<br>
+						ATTENTION: Online Billing Manager<br>
+					</p>
+					<h3>Email Address:</h3>
+					<p>billing@farmersinsurance.com</p>
+				</div>
+			</div>
+			<div class="ModalBtns"><button class="BtnGreen" onClick="popup5('popUpDiv5')">Close</button></div>
+		</div>
+		
+<!--
+		<div id="popUpDiv" class="CreditAuthorization">
+			<div class="ModalClose" title="Close Window" onClick="popup('popUpDiv')"></div>
+			<div class="ModalHdr">
+				<h2>Credit/Debit Card Authorization Agreement</h2>
+			</div>
+			<div class="ModalTxt">
+				<div class="ModalTerms">
+					<h3>Company Name: Farmers Insurance Exchange and its affiliates (members of the Farmers Insurance)</h3>
+					<p>I hereby agree to the terms and conditions of this authorization agreement as follows:</p> 
+					<p>As the Named Insured, I hereby request and authorize Farmers to collect my insurance premiums and other amounts due from me to Farmers by charging my credit\debit card either electronically or by any other method, and I hereby request and authorize my credit/debit card company to pay and charge such amounts to my account. </p>
+					<p>Farmers website may create a small data file, or "cookie", on the hard drive of your computer in order to retain specific customer information. Farmers takes your security seriously and has implemented various measures designed to ensure the confidentiality of customer data, and protect against unauthorized access to or use of such information. </p>
+					<p>Farmers continually reviews and enhances its security systems, and is compliant with the rules and regulations of the Payment Card Industry Data Security Standards ("PCI"). This authorization will remain in effect until Farmers has received written or online notification signifying termination of this agreement. </p>                  
+					<h3>Mailing Address:</h3>
+					<p>
+						Farmers Insurance Exchange<br>
+						4680 Wilshire Blvd<br>
+						Los Angeles, CA 90010<br>
+						ATTENTION: Online Billing Manager<br>
+					</p>
+					<h3>Email Address:</h3>
+					<p>billing@farmersinsurance.com</p>
+					<p>&copy; 2011 Farmers Insurance - All Rights Reserved</p>
+				</div>
+			</div>
+			<div class="ModalBtns"><button class="BtnGreen" onClick="popup('popUpDiv')">Close</button></div>
+		</div>
+		
+		<div id="popUpDiv" class="ACHAuthorization">
+			<div class="ModalClose" title="Close Window" onClick="popup('popUpDiv')"></div>
+			<div class="ModalHdr">
+				<h2>ACH Authorization Agreement</h2>
+			</div>
+			<div class="ModalTxt">
+				<div class="ModalTerms">
+					<h3>Company Name: Farmers Insurance Exchange and its affiliates (members of the Farmers Insurance)</h3>
+					<p>I hereby agree to the terms and conditions of this authorization agreement as follows:</p>
+					<p>As the Named Insured, I hereby request and authorize Farmers to collect my insurance premiums and other amounts due from me to Farmers by debiting my financial institution account either electronically or by any other method, and I hereby request and authorize my financial institution to pay and charge such amounts to my account.</p>
+					<p>Farmers website may create a small data file, or "cookie", on the hard drive of my computer in order to retain specific customer information</p>
+					<p>I also understand that Farmers takes my security seriously and has implemented various measures designed to ensure the confidentiality of customer data, and protect against unauthorized access to or use of such information and that Farmers continually reviews and enhances its security systems, and is compliant with the rules and regulations governing the ACH network as established by NACHA- The Electronic Payment Association. </p>
+					<p>This authorization will remain in effect until Farmers has received written or online notification signifying termination of this agreement.</p>              
+					<h3>Mailing Address:</h3>
+					<p>
+						Farmers Insurance Exchange<br>
+						4680 Wilshire Blvd<br>
+						Los Angeles, CA 90010<br>
+						ATTENTION: Online Billing Manager<br>
+					</p>
+					<h3>Email Address:</h3>
+					<p>billing@farmersinsurance.com</p>
+					<p>&copy; 2011 Farmers Insurance - All Rights Reserved</p>
+				</div>
+			</div>
+			<div class="ModalBtns"><button class="BtnGreen" onClick="popup('popUpDiv')">Close</button></div>
+		</div>
+-->
+	</body>
+</html>

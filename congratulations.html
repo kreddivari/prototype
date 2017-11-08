@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Congratulations | Next Generation Fast Quote ~ Farmers Insurance</title>
+		<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/base/jquery-ui.css" type="text/css" media="all" /> 
+		<link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
+		<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> 
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script> 
+		<script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/tags/latest/external/jquery.bgiframe-2.1.2.js"></script> 
+		<script type="text/javascript" src="js/typecast_1.4.js"></script>
+		<script type="text/javascript" src="js/typecast.config.js"></script>
+		<script type="text/javascript" src="js/jquery.bvalidator.js"></script>-->
+		<!--<script type="text/javascript" src="js/modal.js"></script>-->
+		<!--<script type="text/javascript">
+			$(document).ready(function() {	
+				var $dialog = $('')
+					.html('<img src="images/popup_paymentschedules.png"/>')
+					.dialog({
+						autoOpen: false,
+						title: 'Compare Payment Options',
+						height: 350,
+						width: 845,
+						modal: true,
+						resizable: false,
+						hide: 'fold',
+					});
+					 $(document).ready(function () {
+			         $('#myform').bValidator(); 
+			         });
+		
+				$('#opener').click(function() {
+					$dialog.dialog('open');
+					// prevent the default action, e.g., following a link
+					return false;
+				});
+				});
+		</script>-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+<script>
+
+$(document).ready(function() {	
+
+	//select all the a tag with name equal to modal
+	$('a[name=modal]').click(function(e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		
+		//Get the A tag
+		var id = $(this).attr('href');
+	
+		//Get the screen height and width
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
+	
+		//Set heigth and width to mask to fill up the whole screen
+		$('#mask').css({'width':maskWidth,'height':maskHeight});
+		
+		//transition effect		
+		$('#mask').fadeIn(1000);	
+		$('#mask').fadeTo("slow",0.8);
+		
+	
+		//Get the window height and width
+		var winH = $(window).height();
+		var winW = $(window).width();
+              
+		//Set the popup window to center
+		$(id).css('top',  winH/4-$(id).height()/10);
+		$(id).css('left', winW/4-$(id).width()/8);
+	
+		//transition effect
+		$(id).fadeIn(1000); 
+	
+	});
+	
+	//if close button is clicked
+	$('.window .ModalClose').click(function (e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		
+		$('#mask').hide();
+		$('.window').hide();
+	});		
+	
+	//if mask is clicked
+	$('#mask').click(function () {
+		$(this).hide();
+		$('.window').hide();
+	});			
+	
+});
+
+</script>
+		<style>
+			#mask { position:absolute; left:0; top:0; z-index:9000; background-color:#7f7f7f; display:none; }
+			#boxes .window { position:absolute; display:none; z-index:9999; }
+			#Content label { width: 215px; }
+		</style>
+	</head>
+	<body>		
+		
+		<form>
+		<div id="Document">
+			<div id="Logo" title="Farmers&reg;"></div>
+			<div id="TopNav">
+				<ul>
+					<!--<li id="Title" title="Purchase Auto Insurance for the state of California"><b>Purchase Auto Insurance</b> for the state of Arizona</li>-->
+					<li id="Secure"><a href="#dialog1" title="Information is secure" name="modal">Information is secure</a></li>
+					<li><a href="faqs.html" target="_blank" title="Help &amp; FAQs"><b>?</b> Help &amp; FAQs</a></li>
+				</ul>
+			</div>
+			<div id="BoxArea">
+				<ul id="ProgressBar">
+					<li id="PbBack"><a href="javascript://" title="Completed: Quote" class="Disabled"><span>Completed:</span> Reports</a></li>
+					
+					<li id="PbCongrats"><a href="javascript://" title="Step 3: Congratulations" class="Sel"><span>Step 5:</span> Congrats</a></li>
+				</ul>
+				<div id="AgentInfo" title="Joe Agent">
+					<div id="AgentPhoto"></div>
+					<p>
+						<b>Alecia Pickney</b><br>
+						Americus, GA<br>
+						<span id="AgentPhone">(480) 555-1234</span>
+						<button class="BtnGreen" title="Call Now">Call Now</button>
+					</p>
+				</div>
+<!-- Content Starts -->
+				<div id="Intro" class="IconCongrats">
+					<h1 title="Congratulations!">Congratulations!</h1>
+					
+					<p>Your credit card was charged $21.23. Please note confirmation number for your records.</p>
+				</div>
+				<div id="Content" class="Congrats">
+					<div class="Box">
+						<h2 id="Thanks">Thanks Jordan Williams for choosing Smart vision check</h2>
+						<table id="ConfirmationNumber">
+							<tr>
+								<th colspan="2">Your payment confirmation number is 123456789.</th>
+							</tr>
+							<tr>
+								<td>
+									<table>
+										<tr>
+											<td class="LeftCol">Account Number</td>
+											<td class="RightCol">XXXX-XXXX-XXXX-4444</td>
+										</tr>
+										<tr>
+											<td class="LeftCol">Amount</td>
+											<td class="RightCol">$24.23</td>
+										</tr>
+										<tr>
+											<td class="LeftCol">Date</td>
+											<td class="RightCol">06/23/2017</td>
+										</tr>
+										<tr>
+											<td class="LeftCol">SVN Number</td>
+											<td class="RightCol">1237565789</td>
+										</tr>
+									</table>
+								</td>
+								<td id="ConfirmEmail">We have sent a confirmation email with your purchase details to <a href="mailto:customer@gmail.com">customer@gmail.com</a></td>
+							</tr>
+						</table>
+						
+						<div id="NextSteps" >
+							<h2>Here are some things to do next.</h2>
+							<ul>
+								<li class="Sel">
+									<span>1</span>
+									<h3>Print your Temporary Vision report.</h3>									
+								   <div id="ButtonArea" style="margin-top:-30px;float:right">
+					<a class="BtnPrint" href="#dialog" name="modal" title="Print Quote Summary"><strong>Print</strong> Report</a>
+
+					
+				</div>
+								</li>
+								<li>
+									<span>2</span>
+									<h3>Email Report</h3>
+									
+                                  <div id="ButtonArea" style="margin-top:-30px;float:right">
+					
+					<button class="BtnEmail" title="Email Quote Summary"><strong>Email</strong> Quote Summary</button>
+				</div>
+								</li>
+								<li>
+									<span>3</span>
+									<h3>Glasses Selection</h3>
+									<p>Continue to next phase to select and customize the glasses with frames</p>
+									<button class="BtnGreen" title="Sign Documents">Glasses Selection</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+<!-- Content Ends -->
+<div id="boxes">
+<div id="dialog" class="window">
+		<div id="popUpDiv" class="EOI" style="position: static; z-index: auto; margin: 10px;">
+			<div class="ModalClose" title="Close Window"></div>
+			<div class="ModalHdr">
+				<h2>Temporary Evidence of Vision Check Report</h2>
+			</div>
+			<iframe src="images/eoi.pdf"></iframe>
+			<div class="ModalBtns">
+				<button class="BtnGreen">Print</button>
+			</div>
+		</div>
+</div>
+</div>
+		</form>
+	</body>
+</html>
